@@ -7,7 +7,8 @@
 //
 
 import Foundation
-import Firebase
+import FirebaseCore
+import GoogleMobileAds
 
 class LoadAdMobInterstitialAdTask: LoadInterstitialAdTask {
     private var interstitialAd: GADInterstitial?

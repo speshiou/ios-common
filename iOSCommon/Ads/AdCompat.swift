@@ -7,7 +7,9 @@
 //
 
 import Foundation
-import Firebase
+import FirebaseCore
+import GoogleMobileAds
+import FirebaseAnalytics
 
 class AdCompat {
     class func parseBannerSizes(_ s: String) -> [GADAdSize] {

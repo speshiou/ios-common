@@ -7,7 +7,8 @@
 //
 
 import UIKit
-import Firebase
+import FirebaseCore
+import GoogleMobileAds
 
 class AdmobNativeAdView: UIView {
     @IBOutlet weak var nativeAdView: GADUnifiedNativeAdView!

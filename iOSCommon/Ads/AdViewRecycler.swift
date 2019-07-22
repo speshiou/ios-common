@@ -8,7 +8,8 @@
 
 import Foundation
 import UIKit
-import Firebase
+import FirebaseCore
+import GoogleMobileAds
 
 class AdViewRecycler {
     static let AD_VIEW_FB = "ad_view_fb"

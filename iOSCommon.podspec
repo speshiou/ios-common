@@ -65,7 +65,7 @@ Pod::Spec.new do |spec|
   #
 
   # spec.platform     = :ios
-  # spec.platform     = :ios, "9.0"
+  spec.platform     = :ios, "9.0"
 
   #  When using multiple platforms
   # spec.ios.deployment_target = "5.0"
@@ -132,9 +132,12 @@ Pod::Spec.new do |spec|
 
   # spec.requires_arc = true
 
+  spec.static_framework = true
+
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # spec.dependency "JSONKit", "~> 1.4"
   spec.dependency "Firebase/Analytics"
   spec.dependency "Firebase/AdMob"
+  spec.dependency "FBAudienceNetwork"
 
 end
