@@ -7,6 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C086FA0622E57BBE002BF3F6 /* AdViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C086F9E722E57BBC002BF3F6 /* AdViewCell.xib */; };
+		C086FA0722E57BBE002BF3F6 /* AdViewWrapperFeaturedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C086F9E822E57BBC002BF3F6 /* AdViewWrapperFeaturedCell.xib */; };
+		C086FA0822E57BBE002BF3F6 /* LoadAdmobNativeAdvTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = C086F9E922E57BBD002BF3F6 /* LoadAdmobNativeAdvTask.swift */; };
+		C086FA0922E57BBE002BF3F6 /* FBNativeBannerAdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C086F9EA22E57BBD002BF3F6 /* FBNativeBannerAdView.xib */; };
+		C086FA0A22E57BBE002BF3F6 /* InterstitialAdType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C086F9EB22E57BBD002BF3F6 /* InterstitialAdType.swift */; };
+		C086FA0B22E57BBE002BF3F6 /* FbNativeAdViewShowThread.xib in Resources */ = {isa = PBXBuildFile; fileRef = C086F9EC22E57BBD002BF3F6 /* FbNativeAdViewShowThread.xib */; };
+		C086FA0C22E57BBE002BF3F6 /* AdCompat.swift in Sources */ = {isa = PBXBuildFile; fileRef = C086F9ED22E57BBD002BF3F6 /* AdCompat.swift */; };
+		C086FA0D22E57BBE002BF3F6 /* LoadDfpInterstitialAdTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = C086F9EE22E57BBD002BF3F6 /* LoadDfpInterstitialAdTask.swift */; };
+		C086FA0E22E57BBE002BF3F6 /* LoadInterstitialAdTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = C086F9EF22E57BBD002BF3F6 /* LoadInterstitialAdTask.swift */; };
+		C086FA0F22E57BBE002BF3F6 /* LoadFbNativeAdTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = C086F9F022E57BBD002BF3F6 /* LoadFbNativeAdTask.swift */; };
+		C086FA1022E57BBE002BF3F6 /* LoadAdMobInterstitialAdTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = C086F9F122E57BBD002BF3F6 /* LoadAdMobInterstitialAdTask.swift */; };
+		C086FA1122E57BBE002BF3F6 /* AdmobNativeAdViewFeatured.xib in Resources */ = {isa = PBXBuildFile; fileRef = C086F9F222E57BBD002BF3F6 /* AdmobNativeAdViewFeatured.xib */; };
+		C086FA1222E57BBE002BF3F6 /* AdmobNativeAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C086F9F322E57BBD002BF3F6 /* AdmobNativeAdView.swift */; };
+		C086FA1322E57BBE002BF3F6 /* AdType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C086F9F422E57BBD002BF3F6 /* AdType.swift */; };
+		C086FA1422E57BBE002BF3F6 /* AdmobNativeAdViewShowThread.xib in Resources */ = {isa = PBXBuildFile; fileRef = C086F9F522E57BBD002BF3F6 /* AdmobNativeAdViewShowThread.xib */; };
+		C086FA1522E57BBE002BF3F6 /* AdUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C086F9F622E57BBD002BF3F6 /* AdUtils.swift */; };
+		C086FA1622E57BBE002BF3F6 /* AdmobNativeAdViewForumdisplay.xib in Resources */ = {isa = PBXBuildFile; fileRef = C086F9F722E57BBD002BF3F6 /* AdmobNativeAdViewForumdisplay.xib */; };
+		C086FA1722E57BBE002BF3F6 /* AdViewRecycler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C086F9F822E57BBD002BF3F6 /* AdViewRecycler.swift */; };
+		C086FA1822E57BBE002BF3F6 /* AdViewWrapperShowThreadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C086F9F922E57BBD002BF3F6 /* AdViewWrapperShowThreadCell.xib */; };
+		C086FA1922E57BBE002BF3F6 /* LoadAdTaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C086F9FA22E57BBD002BF3F6 /* LoadAdTaskDelegate.swift */; };
+		C086FA1A22E57BBE002BF3F6 /* FbNativeAdViewFeatured.xib in Resources */ = {isa = PBXBuildFile; fileRef = C086F9FB22E57BBD002BF3F6 /* FbNativeAdViewFeatured.xib */; };
+		C086FA1B22E57BBE002BF3F6 /* LoadCSATask.swift in Sources */ = {isa = PBXBuildFile; fileRef = C086F9FC22E57BBD002BF3F6 /* LoadCSATask.swift */; };
+		C086FA1C22E57BBE002BF3F6 /* LoadFbInterstitialAdTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = C086F9FD22E57BBD002BF3F6 /* LoadFbInterstitialAdTask.swift */; };
+		C086FA1D22E57BBE002BF3F6 /* AdRecycler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C086F9FE22E57BBD002BF3F6 /* AdRecycler.swift */; };
+		C086FA1E22E57BBE002BF3F6 /* FBNativeAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C086F9FF22E57BBD002BF3F6 /* FBNativeAdView.swift */; };
+		C086FA1F22E57BBE002BF3F6 /* InterstitialAdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C086FA0022E57BBE002BF3F6 /* InterstitialAdManager.swift */; };
+		C086FA2022E57BBE002BF3F6 /* InterstitialAdListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = C086FA0122E57BBE002BF3F6 /* InterstitialAdListener.swift */; };
+		C086FA2122E57BBE002BF3F6 /* AdViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C086FA0222E57BBE002BF3F6 /* AdViewCell.swift */; };
+		C086FA2222E57BBE002BF3F6 /* LoadAdTaskAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C086FA0322E57BBE002BF3F6 /* LoadAdTaskAdapter.swift */; };
+		C086FA2322E57BBE002BF3F6 /* LoadAdTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = C086FA0422E57BBE002BF3F6 /* LoadAdTask.swift */; };
+		C086FA2422E57BBE002BF3F6 /* LoadDfpBannerAdTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = C086FA0522E57BBE002BF3F6 /* LoadDfpBannerAdTask.swift */; };
+		C086FA2622E57BD2002BF3F6 /* XibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C086FA2522E57BD1002BF3F6 /* XibView.swift */; };
+		C086FA2822E57BDA002BF3F6 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C086FA2722E57BDA002BF3F6 /* UIView+Extension.swift */; };
 		C09E482022E5713B00BF37B6 /* iOSCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C09E481622E5713B00BF37B6 /* iOSCommon.framework */; };
 		C09E482522E5713B00BF37B6 /* iOSCommonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09E482422E5713B00BF37B6 /* iOSCommonTests.swift */; };
 		C09E482722E5713B00BF37B6 /* iOSCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = C09E481922E5713B00BF37B6 /* iOSCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -27,6 +60,39 @@
 		58D3B83298FA2CEBAFCFECAE /* Pods-iOSCommon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSCommon.debug.xcconfig"; path = "Target Support Files/Pods-iOSCommon/Pods-iOSCommon.debug.xcconfig"; sourceTree = "<group>"; };
 		7940830095FF903CE9368274 /* Pods_iOSCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0A8FFEA2C114B9B4D8C7843 /* Pods-iOSCommon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSCommon.release.xcconfig"; path = "Target Support Files/Pods-iOSCommon/Pods-iOSCommon.release.xcconfig"; sourceTree = "<group>"; };
+		C086F9E722E57BBC002BF3F6 /* AdViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdViewCell.xib; sourceTree = "<group>"; };
+		C086F9E822E57BBC002BF3F6 /* AdViewWrapperFeaturedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdViewWrapperFeaturedCell.xib; sourceTree = "<group>"; };
+		C086F9E922E57BBD002BF3F6 /* LoadAdmobNativeAdvTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadAdmobNativeAdvTask.swift; sourceTree = "<group>"; };
+		C086F9EA22E57BBD002BF3F6 /* FBNativeBannerAdView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FBNativeBannerAdView.xib; sourceTree = "<group>"; };
+		C086F9EB22E57BBD002BF3F6 /* InterstitialAdType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterstitialAdType.swift; sourceTree = "<group>"; };
+		C086F9EC22E57BBD002BF3F6 /* FbNativeAdViewShowThread.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FbNativeAdViewShowThread.xib; sourceTree = "<group>"; };
+		C086F9ED22E57BBD002BF3F6 /* AdCompat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdCompat.swift; sourceTree = "<group>"; };
+		C086F9EE22E57BBD002BF3F6 /* LoadDfpInterstitialAdTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadDfpInterstitialAdTask.swift; sourceTree = "<group>"; };
+		C086F9EF22E57BBD002BF3F6 /* LoadInterstitialAdTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadInterstitialAdTask.swift; sourceTree = "<group>"; };
+		C086F9F022E57BBD002BF3F6 /* LoadFbNativeAdTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadFbNativeAdTask.swift; sourceTree = "<group>"; };
+		C086F9F122E57BBD002BF3F6 /* LoadAdMobInterstitialAdTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadAdMobInterstitialAdTask.swift; sourceTree = "<group>"; };
+		C086F9F222E57BBD002BF3F6 /* AdmobNativeAdViewFeatured.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdmobNativeAdViewFeatured.xib; sourceTree = "<group>"; };
+		C086F9F322E57BBD002BF3F6 /* AdmobNativeAdView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdmobNativeAdView.swift; sourceTree = "<group>"; };
+		C086F9F422E57BBD002BF3F6 /* AdType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdType.swift; sourceTree = "<group>"; };
+		C086F9F522E57BBD002BF3F6 /* AdmobNativeAdViewShowThread.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdmobNativeAdViewShowThread.xib; sourceTree = "<group>"; };
+		C086F9F622E57BBD002BF3F6 /* AdUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdUtils.swift; sourceTree = "<group>"; };
+		C086F9F722E57BBD002BF3F6 /* AdmobNativeAdViewForumdisplay.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdmobNativeAdViewForumdisplay.xib; sourceTree = "<group>"; };
+		C086F9F822E57BBD002BF3F6 /* AdViewRecycler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdViewRecycler.swift; sourceTree = "<group>"; };
+		C086F9F922E57BBD002BF3F6 /* AdViewWrapperShowThreadCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdViewWrapperShowThreadCell.xib; sourceTree = "<group>"; };
+		C086F9FA22E57BBD002BF3F6 /* LoadAdTaskDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadAdTaskDelegate.swift; sourceTree = "<group>"; };
+		C086F9FB22E57BBD002BF3F6 /* FbNativeAdViewFeatured.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FbNativeAdViewFeatured.xib; sourceTree = "<group>"; };
+		C086F9FC22E57BBD002BF3F6 /* LoadCSATask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadCSATask.swift; sourceTree = "<group>"; };
+		C086F9FD22E57BBD002BF3F6 /* LoadFbInterstitialAdTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadFbInterstitialAdTask.swift; sourceTree = "<group>"; };
+		C086F9FE22E57BBD002BF3F6 /* AdRecycler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdRecycler.swift; sourceTree = "<group>"; };
+		C086F9FF22E57BBD002BF3F6 /* FBNativeAdView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBNativeAdView.swift; sourceTree = "<group>"; };
+		C086FA0022E57BBE002BF3F6 /* InterstitialAdManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterstitialAdManager.swift; sourceTree = "<group>"; };
+		C086FA0122E57BBE002BF3F6 /* InterstitialAdListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterstitialAdListener.swift; sourceTree = "<group>"; };
+		C086FA0222E57BBE002BF3F6 /* AdViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdViewCell.swift; sourceTree = "<group>"; };
+		C086FA0322E57BBE002BF3F6 /* LoadAdTaskAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadAdTaskAdapter.swift; sourceTree = "<group>"; };
+		C086FA0422E57BBE002BF3F6 /* LoadAdTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadAdTask.swift; sourceTree = "<group>"; };
+		C086FA0522E57BBE002BF3F6 /* LoadDfpBannerAdTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadDfpBannerAdTask.swift; sourceTree = "<group>"; };
+		C086FA2522E57BD1002BF3F6 /* XibView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XibView.swift; sourceTree = "<group>"; };
+		C086FA2722E57BDA002BF3F6 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		C09E481622E5713B00BF37B6 /* iOSCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iOSCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C09E481922E5713B00BF37B6 /* iOSCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOSCommon.h; sourceTree = "<group>"; };
 		C09E481A22E5713B00BF37B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -61,7 +127,6 @@
 				58D3B83298FA2CEBAFCFECAE /* Pods-iOSCommon.debug.xcconfig */,
 				B0A8FFEA2C114B9B4D8C7843 /* Pods-iOSCommon.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -71,6 +136,60 @@
 				7940830095FF903CE9368274 /* Pods_iOSCommon.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C086F9E022E57AC8002BF3F6 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				C086FA2522E57BD1002BF3F6 /* XibView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		C086F9E322E57AFC002BF3F6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C086FA2722E57BDA002BF3F6 /* UIView+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C086F9E622E57BAA002BF3F6 /* Ads */ = {
+			isa = PBXGroup;
+			children = (
+				C086F9ED22E57BBD002BF3F6 /* AdCompat.swift */,
+				C086F9F322E57BBD002BF3F6 /* AdmobNativeAdView.swift */,
+				C086F9F222E57BBD002BF3F6 /* AdmobNativeAdViewFeatured.xib */,
+				C086F9F722E57BBD002BF3F6 /* AdmobNativeAdViewForumdisplay.xib */,
+				C086F9F522E57BBD002BF3F6 /* AdmobNativeAdViewShowThread.xib */,
+				C086F9FE22E57BBD002BF3F6 /* AdRecycler.swift */,
+				C086F9F422E57BBD002BF3F6 /* AdType.swift */,
+				C086F9F622E57BBD002BF3F6 /* AdUtils.swift */,
+				C086FA0222E57BBE002BF3F6 /* AdViewCell.swift */,
+				C086F9E722E57BBC002BF3F6 /* AdViewCell.xib */,
+				C086F9F822E57BBD002BF3F6 /* AdViewRecycler.swift */,
+				C086F9E822E57BBC002BF3F6 /* AdViewWrapperFeaturedCell.xib */,
+				C086F9F922E57BBD002BF3F6 /* AdViewWrapperShowThreadCell.xib */,
+				C086F9FF22E57BBD002BF3F6 /* FBNativeAdView.swift */,
+				C086F9FB22E57BBD002BF3F6 /* FbNativeAdViewFeatured.xib */,
+				C086F9EC22E57BBD002BF3F6 /* FbNativeAdViewShowThread.xib */,
+				C086F9EA22E57BBD002BF3F6 /* FBNativeBannerAdView.xib */,
+				C086FA0122E57BBE002BF3F6 /* InterstitialAdListener.swift */,
+				C086FA0022E57BBE002BF3F6 /* InterstitialAdManager.swift */,
+				C086F9EB22E57BBD002BF3F6 /* InterstitialAdType.swift */,
+				C086F9F122E57BBD002BF3F6 /* LoadAdMobInterstitialAdTask.swift */,
+				C086F9E922E57BBD002BF3F6 /* LoadAdmobNativeAdvTask.swift */,
+				C086FA0422E57BBE002BF3F6 /* LoadAdTask.swift */,
+				C086FA0322E57BBE002BF3F6 /* LoadAdTaskAdapter.swift */,
+				C086F9FA22E57BBD002BF3F6 /* LoadAdTaskDelegate.swift */,
+				C086F9FC22E57BBD002BF3F6 /* LoadCSATask.swift */,
+				C086FA0522E57BBE002BF3F6 /* LoadDfpBannerAdTask.swift */,
+				C086F9EE22E57BBD002BF3F6 /* LoadDfpInterstitialAdTask.swift */,
+				C086F9FD22E57BBD002BF3F6 /* LoadFbInterstitialAdTask.swift */,
+				C086F9F022E57BBD002BF3F6 /* LoadFbNativeAdTask.swift */,
+				C086F9EF22E57BBD002BF3F6 /* LoadInterstitialAdTask.swift */,
+			);
+			path = Ads;
 			sourceTree = "<group>";
 		};
 		C09E480C22E5713A00BF37B6 = {
@@ -96,7 +215,9 @@
 		C09E481822E5713B00BF37B6 /* iOSCommon */ = {
 			isa = PBXGroup;
 			children = (
-				C09E483022E573EA00BF37B6 /* Ads */,
+				C086F9E622E57BAA002BF3F6 /* Ads */,
+				C086F9E322E57AFC002BF3F6 /* Extensions */,
+				C086F9E022E57AC8002BF3F6 /* UI */,
 				C09E481922E5713B00BF37B6 /* iOSCommon.h */,
 				C09E481A22E5713B00BF37B6 /* Info.plist */,
 			);
@@ -110,13 +231,6 @@
 				C09E482622E5713B00BF37B6 /* Info.plist */,
 			);
 			path = iOSCommonTests;
-			sourceTree = "<group>";
-		};
-		C09E483022E573EA00BF37B6 /* Ads */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Ads;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,6 +296,7 @@
 				TargetAttributes = {
 					C09E481522E5713B00BF37B6 = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 					C09E481E22E5713B00BF37B6 = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -211,6 +326,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C086FA1122E57BBE002BF3F6 /* AdmobNativeAdViewFeatured.xib in Resources */,
+				C086FA0622E57BBE002BF3F6 /* AdViewCell.xib in Resources */,
+				C086FA1822E57BBE002BF3F6 /* AdViewWrapperShowThreadCell.xib in Resources */,
+				C086FA0B22E57BBE002BF3F6 /* FbNativeAdViewShowThread.xib in Resources */,
+				C086FA1422E57BBE002BF3F6 /* AdmobNativeAdViewShowThread.xib in Resources */,
+				C086FA1A22E57BBE002BF3F6 /* FbNativeAdViewFeatured.xib in Resources */,
+				C086FA1622E57BBE002BF3F6 /* AdmobNativeAdViewForumdisplay.xib in Resources */,
+				C086FA0722E57BBE002BF3F6 /* AdViewWrapperFeaturedCell.xib in Resources */,
+				C086FA0922E57BBE002BF3F6 /* FBNativeBannerAdView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +377,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C086FA1022E57BBE002BF3F6 /* LoadAdMobInterstitialAdTask.swift in Sources */,
+				C086FA0F22E57BBE002BF3F6 /* LoadFbNativeAdTask.swift in Sources */,
+				C086FA0D22E57BBE002BF3F6 /* LoadDfpInterstitialAdTask.swift in Sources */,
+				C086FA1322E57BBE002BF3F6 /* AdType.swift in Sources */,
+				C086FA0E22E57BBE002BF3F6 /* LoadInterstitialAdTask.swift in Sources */,
+				C086FA1B22E57BBE002BF3F6 /* LoadCSATask.swift in Sources */,
+				C086FA1222E57BBE002BF3F6 /* AdmobNativeAdView.swift in Sources */,
+				C086FA1922E57BBE002BF3F6 /* LoadAdTaskDelegate.swift in Sources */,
+				C086FA0A22E57BBE002BF3F6 /* InterstitialAdType.swift in Sources */,
+				C086FA2622E57BD2002BF3F6 /* XibView.swift in Sources */,
+				C086FA1722E57BBE002BF3F6 /* AdViewRecycler.swift in Sources */,
+				C086FA2422E57BBE002BF3F6 /* LoadDfpBannerAdTask.swift in Sources */,
+				C086FA2322E57BBE002BF3F6 /* LoadAdTask.swift in Sources */,
+				C086FA0822E57BBE002BF3F6 /* LoadAdmobNativeAdvTask.swift in Sources */,
+				C086FA2122E57BBE002BF3F6 /* AdViewCell.swift in Sources */,
+				C086FA1522E57BBE002BF3F6 /* AdUtils.swift in Sources */,
+				C086FA0C22E57BBE002BF3F6 /* AdCompat.swift in Sources */,
+				C086FA1C22E57BBE002BF3F6 /* LoadFbInterstitialAdTask.swift in Sources */,
+				C086FA2822E57BDA002BF3F6 /* UIView+Extension.swift in Sources */,
+				C086FA2222E57BBE002BF3F6 /* LoadAdTaskAdapter.swift in Sources */,
+				C086FA2022E57BBE002BF3F6 /* InterstitialAdListener.swift in Sources */,
+				C086FA1F22E57BBE002BF3F6 /* InterstitialAdManager.swift in Sources */,
+				C086FA1E22E57BBE002BF3F6 /* FBNativeAdView.swift in Sources */,
+				C086FA1D22E57BBE002BF3F6 /* AdRecycler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +549,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 58D3B83298FA2CEBAFCFECAE /* Pods-iOSCommon.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -418,6 +567,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.backpackers.iOSCommon;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -427,6 +577,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B0A8FFEA2C114B9B4D8C7843 /* Pods-iOSCommon.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -452,6 +603,7 @@
 		C09E482E22E5713B00BF37B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3TBEJ3RT4J;
 				INFOPLIST_FILE = iOSCommonTests/Info.plist;
@@ -470,6 +622,7 @@
 		C09E482F22E5713B00BF37B6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3TBEJ3RT4J;
 				INFOPLIST_FILE = iOSCommonTests/Info.plist;
