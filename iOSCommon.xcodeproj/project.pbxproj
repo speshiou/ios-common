@@ -10,6 +10,7 @@
 		C09E482022E5713B00BF37B6 /* iOSCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C09E481622E5713B00BF37B6 /* iOSCommon.framework */; };
 		C09E482522E5713B00BF37B6 /* iOSCommonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09E482422E5713B00BF37B6 /* iOSCommonTests.swift */; };
 		C09E482722E5713B00BF37B6 /* iOSCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = C09E481922E5713B00BF37B6 /* iOSCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F1169D9E6DA9C7C3BEFB76B3 /* Pods_iOSCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7940830095FF903CE9368274 /* Pods_iOSCommon.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,6 +24,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		58D3B83298FA2CEBAFCFECAE /* Pods-iOSCommon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSCommon.debug.xcconfig"; path = "Target Support Files/Pods-iOSCommon/Pods-iOSCommon.debug.xcconfig"; sourceTree = "<group>"; };
+		7940830095FF903CE9368274 /* Pods_iOSCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0A8FFEA2C114B9B4D8C7843 /* Pods-iOSCommon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSCommon.release.xcconfig"; path = "Target Support Files/Pods-iOSCommon/Pods-iOSCommon.release.xcconfig"; sourceTree = "<group>"; };
 		C09E481622E5713B00BF37B6 /* iOSCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iOSCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C09E481922E5713B00BF37B6 /* iOSCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOSCommon.h; sourceTree = "<group>"; };
 		C09E481A22E5713B00BF37B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -36,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1169D9E6DA9C7C3BEFB76B3 /* Pods_iOSCommon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,12 +55,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD76B127C405E173FB5D1ACE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				58D3B83298FA2CEBAFCFECAE /* Pods-iOSCommon.debug.xcconfig */,
+				B0A8FFEA2C114B9B4D8C7843 /* Pods-iOSCommon.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BDC17D08F78C243364B20FC8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7940830095FF903CE9368274 /* Pods_iOSCommon.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C09E480C22E5713A00BF37B6 = {
 			isa = PBXGroup;
 			children = (
 				C09E481822E5713B00BF37B6 /* iOSCommon */,
 				C09E482322E5713B00BF37B6 /* iOSCommonTests */,
 				C09E481722E5713B00BF37B6 /* Products */,
+				BD76B127C405E173FB5D1ACE /* Pods */,
+				BDC17D08F78C243364B20FC8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +96,7 @@
 		C09E481822E5713B00BF37B6 /* iOSCommon */ = {
 			isa = PBXGroup;
 			children = (
+				C09E483022E573EA00BF37B6 /* Ads */,
 				C09E481922E5713B00BF37B6 /* iOSCommon.h */,
 				C09E481A22E5713B00BF37B6 /* Info.plist */,
 			);
@@ -84,6 +110,13 @@
 				C09E482622E5713B00BF37B6 /* Info.plist */,
 			);
 			path = iOSCommonTests;
+			sourceTree = "<group>";
+		};
+		C09E483022E573EA00BF37B6 /* Ads */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Ads;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -104,6 +137,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C09E482A22E5713B00BF37B6 /* Build configuration list for PBXNativeTarget "iOSCommon" */;
 			buildPhases = (
+				A2F7B82DA07329FF65F77118 /* [CP] Check Pods Manifest.lock */,
 				C09E481122E5713B00BF37B6 /* Headers */,
 				C09E481222E5713B00BF37B6 /* Sources */,
 				C09E481322E5713B00BF37B6 /* Frameworks */,
@@ -188,6 +222,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A2F7B82DA07329FF65F77118 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iOSCommon-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C09E481222E5713B00BF37B6 /* Sources */ = {
@@ -340,6 +399,7 @@
 		};
 		C09E482B22E5713B00BF37B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58D3B83298FA2CEBAFCFECAE /* Pods-iOSCommon.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -365,6 +425,7 @@
 		};
 		C09E482C22E5713B00BF37B6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0A8FFEA2C114B9B4D8C7843 /* Pods-iOSCommon.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
