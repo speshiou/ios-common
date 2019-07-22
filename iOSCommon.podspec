@@ -17,7 +17,7 @@ Pod::Spec.new do |spec|
 
   spec.name         = "iOSCommon"
   spec.version      = "1.0.0"
-  spec.summary      = "A short description of iOSCommon."
+  spec.summary      = "iOS Common Library"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,9 +25,10 @@ Pod::Spec.new do |spec|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   spec.description  = <<-DESC
+  iOS Common Library
                    DESC
 
-  spec.homepage     = "http://EXAMPLE/iOSCommon"
+  spec.homepage     = "https://github.com/speshiou/ios-common"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
