@@ -9,7 +9,7 @@
 import Foundation
 import FBAudienceNetwork
 
-class LoadFbInterstitialAdTask: LoadInterstitialAdTask {
+public class LoadFbInterstitialAdTask: LoadInterstitialAdTask {
     private var interstitialAd: FBInterstitialAd?
     
     override func onLoad() {
@@ -45,27 +45,27 @@ class LoadFbInterstitialAdTask: LoadInterstitialAdTask {
 
 extension LoadFbInterstitialAdTask: FBInterstitialAdDelegate {
     
-    func interstitialAdWillLogImpression(_ interstitialAd: FBInterstitialAd) {
+    public func interstitialAdWillLogImpression(_ interstitialAd: FBInterstitialAd) {
         delegate?.onAdDisplayed()
         
         AdCompat.logImpressionEvent(adType: adType, adId: adId)
     }
     
-    func interstitialAdDidClose(_ interstitialAd: FBInterstitialAd) {
+    public func interstitialAdDidClose(_ interstitialAd: FBInterstitialAd) {
         delegate?.onAdDismissed()
     }
     
-    func interstitialAdDidClick(_ interstitialAd: FBInterstitialAd) {
+    public func interstitialAdDidClick(_ interstitialAd: FBInterstitialAd) {
         delegate?.onAdClicked()
         
         AdCompat.logClickEvent(adType: adType, adId: adId)
     }
     
-    func interstitialAdDidLoad(_ interstitialAd: FBInterstitialAd) {
+    public func interstitialAdDidLoad(_ interstitialAd: FBInterstitialAd) {
         delegate?.onAdLoaded()
     }
     
-    func interstitialAd(_ interstitialAd: FBInterstitialAd, didFailWithError error: Error) {
+    public func interstitialAd(_ interstitialAd: FBInterstitialAd, didFailWithError error: Error) {
         delegate?.onError()
     }
 

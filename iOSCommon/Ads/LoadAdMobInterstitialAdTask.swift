@@ -10,7 +10,7 @@ import Foundation
 import FirebaseCore
 import GoogleMobileAds
 
-class LoadAdMobInterstitialAdTask: LoadInterstitialAdTask {
+public class LoadAdMobInterstitialAdTask: LoadInterstitialAdTask {
     private var interstitialAd: GADInterstitial?
     
     override func onLoad() {
@@ -45,31 +45,31 @@ class LoadAdMobInterstitialAdTask: LoadInterstitialAdTask {
 }
 
 extension LoadAdMobInterstitialAdTask: GADInterstitialDelegate {
-    func interstitialWillPresentScreen(_ ad: GADInterstitial) {
+    public func interstitialWillPresentScreen(_ ad: GADInterstitial) {
         delegate?.onAdDisplayed()
         
         AdCompat.logImpressionEvent(adType: adType, adId: adId)
     }
     
-    func interstitialDidDismissScreen(_ ad: GADInterstitial) {
+    public func interstitialDidDismissScreen(_ ad: GADInterstitial) {
         delegate?.onAdDismissed()
     }
     
-    func interstitialWillLeaveApplication(_ ad: GADInterstitial) {
+    public func interstitialWillLeaveApplication(_ ad: GADInterstitial) {
         delegate?.onAdClicked()
         
         AdCompat.logClickEvent(adType: adType, adId: adId)
     }
     
-    func interstitialDidReceiveAd(_ ad: GADInterstitial) {
+    public func interstitialDidReceiveAd(_ ad: GADInterstitial) {
         delegate?.onAdLoaded()
     }
     
-    func interstitialDidFail(toPresentScreen ad: GADInterstitial) {
+    public func interstitialDidFail(toPresentScreen ad: GADInterstitial) {
         
     }
     
-    func interstitial(_ ad: GADInterstitial, didFailToReceiveAdWithError error: GADRequestError) {
+    public func interstitial(_ ad: GADInterstitial, didFailToReceiveAdWithError error: GADRequestError) {
         delegate?.onError()
     }
 }

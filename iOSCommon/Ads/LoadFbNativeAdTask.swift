@@ -9,7 +9,7 @@
 import Foundation
 import FBAudienceNetwork
 
-class LoadFbNativeAdTask: LoadAdTask {
+public class LoadFbNativeAdTask: LoadAdTask {
     
     var nativeAd: FBNativeAdBase?
     var pendingNativeAd: FBNativeAdBase?
@@ -59,13 +59,13 @@ class LoadFbNativeAdTask: LoadAdTask {
 }
 
 extension LoadFbNativeAdTask: FBNativeBannerAdDelegate {
-    func nativeBannerAdDidLoad(_ nativeBannerAd: FBNativeBannerAd) {
+    public func nativeBannerAdDidLoad(_ nativeBannerAd: FBNativeBannerAd) {
         self.nativeAd = nativeBannerAd
         self.pendingNativeAd = nil
         self.didLoad()
     }
     
-    func nativeBannerAd(_ nativeBannerAd: FBNativeBannerAd, didFailWithError error: Error) {
+    public func nativeBannerAd(_ nativeBannerAd: FBNativeBannerAd, didFailWithError error: Error) {
         NSLog(error.localizedDescription)
         if self.nativeAd == nil {
             self.didFail()
@@ -76,13 +76,13 @@ extension LoadFbNativeAdTask: FBNativeBannerAdDelegate {
 }
 
 extension LoadFbNativeAdTask: FBNativeAdDelegate {
-    func nativeAdDidLoad(_ nativeAd: FBNativeAd) {
+    public func nativeAdDidLoad(_ nativeAd: FBNativeAd) {
         self.nativeAd = nativeAd
         self.pendingNativeAd = nil
         self.didLoad()
     }
     
-    func nativeAd(_ nativeAd: FBNativeAd, didFailWithError error: Error) {
+    public func nativeAd(_ nativeAd: FBNativeAd, didFailWithError error: Error) {
         NSLog(error.localizedDescription)
         if self.nativeAd == nil {
             self.didFail()

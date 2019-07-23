@@ -8,22 +8,22 @@
 
 import UIKit
 
-class AdViewCell: UITableViewCell {
+public class AdViewCell: UITableViewCell {
 
     @IBOutlet weak var wrapper: UIView!
     
     var adTask: LoadAdTask?
     
-    override func awakeFromNib() {
+    override public func awakeFromNib() {
         super.awakeFromNib()
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
+    override public func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         // Configure the view for the selected state
     }
     
-    override func prepareForReuse() {
+    override public func prepareForReuse() {
         super.prepareForReuse()
         let wrapper = self.wrapper ?? self.contentView
         for subview in wrapper.subviews {

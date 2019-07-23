@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class LoadInterstitialAdTask: NSObject {
+public class LoadInterstitialAdTask: NSObject {
     
     weak var delegate: InterstitialAdListener?
     weak var rootViewController: UIViewController?

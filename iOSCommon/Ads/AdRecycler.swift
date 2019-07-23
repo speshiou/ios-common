@@ -9,18 +9,20 @@
 import Foundation
 import UIKit
 
-class AdRecycler {
-    weak var rootViewController: UIViewController?
-    var adViewRecycler: AdViewRecycler!
-    var adTaskMap = [ String: [LoadAdTask]]()
-    var keyword: String?
+public class AdRecycler {
     
-    init(rootViewController: UIViewController) {
+    public var keyword: String?
+    public var adViewRecycler: AdViewRecycler!
+    
+    weak var rootViewController: UIViewController?
+    var adTaskMap = [ String: [LoadAdTask]]()
+    
+    public init(rootViewController: UIViewController) {
         self.rootViewController = rootViewController
         self.adViewRecycler = AdViewRecycler(rootViewController: rootViewController)
     }
     
-    func obtainLoadAdTask(_ adType: String, adUnitId: String, refreshRate: Double) -> LoadAdTask? {
+    public func obtainLoadAdTask(_ adType: String, adUnitId: String, refreshRate: Double) -> LoadAdTask? {
         guard let rootViewController = rootViewController else {
             return nil
         }
@@ -72,7 +74,7 @@ class AdRecycler {
         return reusedAdTask
     }
     
-    func recycleLoadAdTask(_ adType: String, adTask: LoadAdTask) {
+    public func recycleLoadAdTask(_ adType: String, adTask: LoadAdTask) {
         var tasks = adTaskMap[adType]
         if tasks == nil {
             tasks = [LoadAdTask]()

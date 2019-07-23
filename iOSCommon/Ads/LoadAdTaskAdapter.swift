@@ -23,7 +23,7 @@ class LoadAdTaskAdapter: LoadAdTask {
         loadAdTask.main()
     }
     
-    override var adContainer: AdViewCell? {
+    override public var adContainer: AdViewCell? {
         didSet {
             loadAdTask.adContainer = self.adContainer
         }

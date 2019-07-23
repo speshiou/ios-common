@@ -9,7 +9,7 @@
 import Foundation
 import GoogleMobileAds
 
-class LoadDfpBannerAdTask: LoadAdTask {
+public class LoadDfpBannerAdTask: LoadAdTask {
     
     var bannerView: DFPBannerView?
     var pendingBannerView: DFPBannerView?
@@ -63,13 +63,13 @@ class LoadDfpBannerAdTask: LoadAdTask {
 }
 
 extension LoadDfpBannerAdTask: GADBannerViewDelegate {
-    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
+    public func adViewDidReceiveAd(_ bannerView: GADBannerView) {
         self.bannerView = bannerView as? DFPBannerView
         self.pendingBannerView = nil
         self.didLoad()
     }
     
-    func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
+    public func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
         NSLog("\(error.code) \(error.localizedDescription)")
         if self.bannerView == nil {
             self.didFail()
@@ -78,17 +78,17 @@ extension LoadDfpBannerAdTask: GADBannerViewDelegate {
         }
     }
     
-    func adViewWillPresentScreen(_ bannerView: GADBannerView) {
+    public func adViewWillPresentScreen(_ bannerView: GADBannerView) {
         print("adViewWillPresentScreen")
     }
     
-    func adViewWillLeaveApplication(_ bannerView: GADBannerView) {
+    public func adViewWillLeaveApplication(_ bannerView: GADBannerView) {
         print("adViewWillLeaveApplication")
     }
 }
 
 extension LoadDfpBannerAdTask: GADAdSizeDelegate {
-    func adView(_ bannerView: GADBannerView, willChangeAdSizeTo size: GADAdSize) {
+    public func adView(_ bannerView: GADBannerView, willChangeAdSizeTo size: GADAdSize) {
         var isFluid = true
         for adSize in self.adViewRecycler.dfpBannerAdSizes {
             if adSize.size.width == size.size.width && adSize.size.height == size.size.height {

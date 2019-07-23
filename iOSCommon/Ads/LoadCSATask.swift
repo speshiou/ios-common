@@ -9,13 +9,14 @@
 import Foundation
 import GoogleMobileAds
 
-class LoadCSATask: LoadAdTask, GADBannerViewDelegate, GADAdSizeDelegate {
+public class LoadCSATask: LoadAdTask, GADBannerViewDelegate, GADAdSizeDelegate {
+    
+    public var size = CGSize.zero
+    public var page = -1
     
     var bannerView: GADSearchBannerView?
     var pendingBannerView: GADSearchBannerView?
     var keyword: String?
-    var size = CGSize.zero
-    var page = -1
     var padding: CGFloat = 12
     var heightConstraint: NSLayoutConstraint?
     
@@ -84,13 +85,13 @@ class LoadCSATask: LoadAdTask, GADBannerViewDelegate, GADAdSizeDelegate {
         bannerView.constrainToParent(insets: UIEdgeInsets(top: 0, left: padding, bottom: 0, right: 0))
     }
     
-    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
+    public func adViewDidReceiveAd(_ bannerView: GADBannerView) {
         self.bannerView = bannerView as? GADSearchBannerView
         self.pendingBannerView = nil
         self.didLoad()
     }
     
-    func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
+    public func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
         NSLog(error.localizedDescription)
         if self.bannerView == nil {
             self.didFail()
@@ -99,7 +100,7 @@ class LoadCSATask: LoadAdTask, GADBannerViewDelegate, GADAdSizeDelegate {
         }
     }
     
-    func adView(_ bannerView: GADBannerView, willChangeAdSizeTo size: GADAdSize) {
+    public func adView(_ bannerView: GADBannerView, willChangeAdSizeTo size: GADAdSize) {
         self.size = size.size
         self.heightConstraint?.constant = self.size.height
         

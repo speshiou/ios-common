@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol LoadAdTaskDelegate {
+public protocol LoadAdTaskDelegate {
     func adDidLoad(adTask: LoadAdTask)
 }

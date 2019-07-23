@@ -11,7 +11,7 @@ import UIKit
 import FirebaseCore
 import GoogleMobileAds
 
-class AdViewRecycler {
+public class AdViewRecycler {
     static let AD_VIEW_FB = "ad_view_fb"
     static let AD_VIEW_GOOGLE = "ad_view_google"
     static let AD_VIEW_CSA = "ad_view_csa"
@@ -20,24 +20,24 @@ class AdViewRecycler {
     
     weak var rootViewController: UIViewController?
     var adViewMap = [ String: [UIView] ]()
-    var admobNativeAdViewNibName = "AdmobNativeAdView"
-    var fbNativeAdViewNibName = "FBNativeBannerAdView"
-    var adViewCellNibName: String?
-    var dfpBannerAdSizes = [GADAdSize]()
+    public var admobNativeAdViewNibName = "AdmobNativeAdView"
+    public var fbNativeAdViewNibName = "FBNativeBannerAdView"
+    public var adViewCellNibName: String?
+    public var dfpBannerAdSizes = [GADAdSize]()
     
     init(rootViewController: UIViewController) {
         self.rootViewController = rootViewController
     }
     
-    class func getAdViewCellIdentifier(adType: String) -> String {
+    public class func getAdViewCellIdentifier(adType: String) -> String {
         return AdViewRecycler.AD_VIEW_CELL_ID
     }
     
-    func registerAdCells(to tableView: UITableView) {
+    public func registerAdCells(to tableView: UITableView) {
         if let nibName = self.adViewCellNibName {
             tableView.register(UINib.init(nibName: nibName, bundle: Bundle.main), forCellReuseIdentifier: AdViewRecycler.AD_VIEW_CELL_ID)
         } else {
-            tableView.register(UINib.init(nibName: "AdViewCell", bundle: Bundle.main), forCellReuseIdentifier: AdViewRecycler.AD_VIEW_CELL_ID)
+            tableView.register(UINib.init(nibName: "AdViewCell", bundle: PodHelper.bundle), forCellReuseIdentifier: AdViewRecycler.AD_VIEW_CELL_ID)
         }
     }
     

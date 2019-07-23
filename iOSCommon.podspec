@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "iOSCommon"
-  spec.version      = "1.0.4"
+  spec.version      = "1.1.0"
   spec.summary      = "iOS Common Library"
 
   # This description is used to generate tags and improve search results.
@@ -107,6 +107,9 @@ Pod::Spec.new do |spec|
 
   # spec.resource  = "icon.png"
   # spec.resources = "Resources/*.png"
+  spec.resource_bundles = {
+    'iOSCommon' => ['iOSCommon/**/*.{xib,storyboard}']
+  }
 
   # spec.preserve_paths = "FilesToSave", "MoreFilesToSave"
 

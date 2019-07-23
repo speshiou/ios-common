@@ -9,7 +9,7 @@
 import Foundation
 import GoogleMobileAds
 
-class LoadAdmobNativeAdvTask: LoadAdTask {
+public class LoadAdmobNativeAdvTask: LoadAdTask {
     
     var adLoader: GADAdLoader!
     var nativeAd: GADUnifiedNativeAd?
@@ -85,7 +85,7 @@ class LoadAdmobNativeAdvTask: LoadAdTask {
 }
 
 extension LoadAdmobNativeAdvTask: GADAdLoaderDelegate {
-    func adLoader(_ adLoader: GADAdLoader, didFailToReceiveAdWithError error: GADRequestError) {
+    public func adLoader(_ adLoader: GADAdLoader, didFailToReceiveAdWithError error: GADRequestError) {
         NSLog(error.localizedDescription)
         if self.nativeAd == nil && self.dfpBannerView == nil {
             self.didFail()
@@ -96,7 +96,7 @@ extension LoadAdmobNativeAdvTask: GADAdLoaderDelegate {
 }
 
 extension LoadAdmobNativeAdvTask: GADUnifiedNativeAdLoaderDelegate {
-    func adLoader(_ adLoader: GADAdLoader, didReceive nativeAd: GADUnifiedNativeAd) {
+    public func adLoader(_ adLoader: GADAdLoader, didReceive nativeAd: GADUnifiedNativeAd) {
         self.nativeAd = nativeAd
         self.dfpBannerView = nil
         self.didLoad()
@@ -104,7 +104,7 @@ extension LoadAdmobNativeAdvTask: GADUnifiedNativeAdLoaderDelegate {
 }
 
 extension LoadAdmobNativeAdvTask: DFPBannerAdLoaderDelegate {
-    func validBannerSizes(for adLoader: GADAdLoader) -> [NSValue] {
+    public func validBannerSizes(for adLoader: GADAdLoader) -> [NSValue] {
         var values = [NSValue]()
         for adSize in self.adViewRecycler.dfpBannerAdSizes {
             values.append(NSValueFromGADAdSize(adSize))
@@ -112,7 +112,7 @@ extension LoadAdmobNativeAdvTask: DFPBannerAdLoaderDelegate {
         return values
     }
     
-    func adLoader(_ adLoader: GADAdLoader, didReceive bannerView: DFPBannerView) {
+    public func adLoader(_ adLoader: GADAdLoader, didReceive bannerView: DFPBannerView) {
         self.dfpBannerView = bannerView
         self.nativeAd = nil
         self.didLoad()

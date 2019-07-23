@@ -9,13 +9,14 @@
 import Foundation
 import GoogleMobileAds
 
-class LoadAdTask: Operation {
+public class LoadAdTask: Operation {
     
     static let AD_REFRESH_RATE: Double = -1 // unit: seconds
     
+    public var adType: String
+    
     weak var rootViewController: UIViewController?
     var adViewRecycler: AdViewRecycler
-    var adType: String
     var adUnitId: String
     var isLoading = false
     var refreshRate = LoadAdTask.AD_REFRESH_RATE
@@ -32,7 +33,7 @@ class LoadAdTask: Operation {
         }
     }
     
-    weak var adContainer: AdViewCell? {
+    public weak var adContainer: AdViewCell? {
         didSet {
             if let adContainer = self.adContainer {
                 adContainer.adTask = self
@@ -51,7 +52,7 @@ class LoadAdTask: Operation {
         super.init()
     }
     
-    override func main() {
+    override public func main() {
         if self.isLoading {
             return
         }
