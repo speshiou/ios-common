@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C04871BE22E6EFA300473E05 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04871BD22E6EFA300473E05 /* BaseTableViewController.swift */; };
+		C04871C022E6EFC500473E05 /* LoadMoreHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04871BF22E6EFC500473E05 /* LoadMoreHelper.swift */; };
+		C04871C222E6F01200473E05 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04871C122E6F01200473E05 /* EmptyView.swift */; };
 		C086FA0622E57BBE002BF3F6 /* AdViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C086F9E722E57BBC002BF3F6 /* AdViewCell.xib */; };
 		C086FA0822E57BBE002BF3F6 /* LoadAdmobNativeAdvTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = C086F9E922E57BBD002BF3F6 /* LoadAdmobNativeAdvTask.swift */; };
 		C086FA0922E57BBE002BF3F6 /* FBNativeBannerAdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C086F9EA22E57BBD002BF3F6 /* FBNativeBannerAdView.xib */; };
@@ -57,6 +60,9 @@
 		58D3B83298FA2CEBAFCFECAE /* Pods-iOSCommon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSCommon.debug.xcconfig"; path = "Target Support Files/Pods-iOSCommon/Pods-iOSCommon.debug.xcconfig"; sourceTree = "<group>"; };
 		7940830095FF903CE9368274 /* Pods_iOSCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0A8FFEA2C114B9B4D8C7843 /* Pods-iOSCommon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSCommon.release.xcconfig"; path = "Target Support Files/Pods-iOSCommon/Pods-iOSCommon.release.xcconfig"; sourceTree = "<group>"; };
+		C04871BD22E6EFA300473E05 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
+		C04871BF22E6EFC500473E05 /* LoadMoreHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadMoreHelper.swift; sourceTree = "<group>"; };
+		C04871C122E6F01200473E05 /* EmptyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
 		C086F9E722E57BBC002BF3F6 /* AdViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdViewCell.xib; sourceTree = "<group>"; };
 		C086F9E922E57BBD002BF3F6 /* LoadAdmobNativeAdvTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadAdmobNativeAdvTask.swift; sourceTree = "<group>"; };
 		C086F9EA22E57BBD002BF3F6 /* FBNativeBannerAdView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FBNativeBannerAdView.xib; sourceTree = "<group>"; };
@@ -135,6 +141,9 @@
 		C086F9E022E57AC8002BF3F6 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				C04871BD22E6EFA300473E05 /* BaseTableViewController.swift */,
+				C04871BF22E6EFC500473E05 /* LoadMoreHelper.swift */,
+				C04871C122E6F01200473E05 /* EmptyView.swift */,
 				C086FA2522E57BD1002BF3F6 /* XibView.swift */,
 			);
 			path = UI;
@@ -366,6 +375,7 @@
 			files = (
 				C086FA1022E57BBE002BF3F6 /* LoadAdMobInterstitialAdTask.swift in Sources */,
 				C086FA0F22E57BBE002BF3F6 /* LoadFbNativeAdTask.swift in Sources */,
+				C04871BE22E6EFA300473E05 /* BaseTableViewController.swift in Sources */,
 				C086FA0D22E57BBE002BF3F6 /* LoadDfpInterstitialAdTask.swift in Sources */,
 				C086FA1322E57BBE002BF3F6 /* AdType.swift in Sources */,
 				C097C80122E6CB30003D0761 /* PodHelper.swift in Sources */,
@@ -375,10 +385,12 @@
 				C086FA1922E57BBE002BF3F6 /* LoadAdTaskDelegate.swift in Sources */,
 				C086FA0A22E57BBE002BF3F6 /* InterstitialAdType.swift in Sources */,
 				C086FA2622E57BD2002BF3F6 /* XibView.swift in Sources */,
+				C04871C222E6F01200473E05 /* EmptyView.swift in Sources */,
 				C086FA1722E57BBE002BF3F6 /* AdViewRecycler.swift in Sources */,
 				C086FA2422E57BBE002BF3F6 /* LoadDfpBannerAdTask.swift in Sources */,
 				C086FA2322E57BBE002BF3F6 /* LoadAdTask.swift in Sources */,
 				C086FA0822E57BBE002BF3F6 /* LoadAdmobNativeAdvTask.swift in Sources */,
+				C04871C022E6EFC500473E05 /* LoadMoreHelper.swift in Sources */,
 				C086FA2122E57BBE002BF3F6 /* AdViewCell.swift in Sources */,
 				C086FA1522E57BBE002BF3F6 /* AdUtils.swift in Sources */,
 				C086FA0C22E57BBE002BF3F6 /* AdCompat.swift in Sources */,
