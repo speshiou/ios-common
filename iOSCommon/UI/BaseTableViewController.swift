@@ -10,10 +10,12 @@ import UIKit
 
 open class BaseTableViewController: UITableViewController {
     
+    public static let CELL_ID_EMPTY_VIEW = "EmptyViewCell"
+    
     static let CELL_TYPE_DATA = -1
     static let CELL_TYPE_LOAD_MORE = -2
     static let KEY_PAGE = "key_page"
-    static let PRELOAD_MORE_AHEAD = 30
+    open var preloadMoreAhead = 10
     
     weak var scrollDelegate: BaseTableViewControllerScrollDelegate?
     
@@ -74,6 +76,7 @@ open class BaseTableViewController: UITableViewController {
         
         self.tableView.rowHeight = UITableView.automaticDimension
         self.tableView.register(UINib.init(nibName: "LoadMoreCell", bundle: Bundle.main), forCellReuseIdentifier: "loadMoreCell")
+        self.tableView.register(UINib.init(nibName: BaseTableViewController.CELL_ID_EMPTY_VIEW, bundle: Bundle.main), forCellReuseIdentifier: BaseTableViewController.CELL_ID_EMPTY_VIEW)
         
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(self.didRefresh(_:)), for: .valueChanged)
@@ -123,7 +126,7 @@ open class BaseTableViewController: UITableViewController {
             }
             return cell
         } else {
-            if self.tableView(tableView, numberOfRowsInSection: indexPath.section) - indexPath.row < BaseTableViewController.PRELOAD_MORE_AHEAD, loadMoreHelper.hasMoreData(section: indexPath.section), !loadMoreHelper.isLoading(section: indexPath.section) {
+            if self.tableView(tableView, numberOfRowsInSection: indexPath.section) - indexPath.row < self.preloadMoreAhead, loadMoreHelper.hasMoreData(section: indexPath.section), !loadMoreHelper.isLoading(section: indexPath.section) {
                 let data = self.loadMoreHelper.loadData(section: indexPath.section)
                 DispatchQueue.main.async {
                     self.tableView(tableView, willLoadMoreData: indexPath.section, with: data)
@@ -271,14 +274,14 @@ open class BaseTableViewController: UITableViewController {
                 self.cachedCellHeights[indexPath.section] = cache
             }
         }
-        
+        self.tableView.reloadRows(at: indexPaths, with: .automatic)
 //        if self.isScrolling {
 //            self.pendingReloadRows += indexPaths
 //        } else {
-            UIView.performWithoutAnimation {
-                [ weak self ] in
-                self?.tableView.reloadRows(at: indexPaths, with: .none)
-            }
+//            UIView.performWithoutAnimation {
+//                [ weak self ] in
+//                self?.tableView.reloadRows(at: indexPaths, with: .none)
+//            }
 //        }
     }
     
