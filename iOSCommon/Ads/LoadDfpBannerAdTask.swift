@@ -46,19 +46,18 @@ public class LoadDfpBannerAdTask: LoadAdTask {
         self.pendingBannerView = bannerView
     }
     
-    override func attachAd(to adViewCell: AdViewCell) {
-        super.attachAd(to: adViewCell)
+    override func attachAd(to container: UIView) {
+        super.attachAd(to: container)
         
         guard let bannerView = self.bannerView else {
             return
         }
         bannerView.removeFromSuperview()
-        let wrapper = adViewCell.wrapper ?? adViewCell.contentView
-        wrapper.addSubview(bannerView)
+        container.addSubview(bannerView)
         //        bannerView.constrainToParent()
-        bannerView.topAnchor.constraint(equalTo: wrapper.topAnchor, constant: 0).isActive = true
-        bannerView.bottomAnchor.constraint(equalTo: wrapper.bottomAnchor, constant: 0).isActive = true
-        bannerView.centerXAnchor.constraint(equalTo: wrapper.centerXAnchor).isActive = true
+        bannerView.topAnchor.constraint(equalTo: container.topAnchor, constant: 0).isActive = true
+        bannerView.bottomAnchor.constraint(equalTo: container.bottomAnchor, constant: 0).isActive = true
+        bannerView.centerXAnchor.constraint(equalTo: container.centerXAnchor).isActive = true
     }
 }
 

@@ -79,10 +79,16 @@ public class LoadAdTask: Operation {
         self.loadedTime = 0
     }
     
-    func attachAd(to cell: AdViewCell) {
-//        for subview in cell.contentView.subviews {
-//            subview.removeFromSuperview()
-//        }
+    private func attachAd(to cell: AdViewCell) {
+        let wrapper = cell.wrapper ?? cell.contentView
+        for subview in wrapper.subviews {
+            subview.removeFromSuperview()
+        }
+        self.attachAd(to: wrapper)
+    }
+    
+    func attachAd(to container: UIView) {
+        
     }
     
     func notifyAdDidLoad() {

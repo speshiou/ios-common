@@ -74,14 +74,14 @@ public class LoadCSATask: LoadAdTask, GADBannerViewDelegate, GADAdSizeDelegate {
         self.pendingBannerView = bannerView
     }
     
-    override func attachAd(to adViewCell: AdViewCell) {
-        super.attachAd(to: adViewCell)
+    override func attachAd(to container: UIView) {
+        super.attachAd(to: container)
         
         guard let bannerView = bannerView else {
             return
         }
         bannerView.removeFromSuperview()
-        adViewCell.contentView.addSubview(bannerView)
+        container.addSubview(bannerView)
         bannerView.constrainToParent(insets: UIEdgeInsets(top: 0, left: padding, bottom: 0, right: 0))
     }
     

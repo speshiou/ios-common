@@ -27,10 +27,9 @@ public class LoadFbNativeAdTask: LoadAdTask {
         self.pendingNativeAd = nativeAd
     }
     
-    override func attachAd(to adViewCell: AdViewCell) {
-        super.attachAd(to: adViewCell)
+    override func attachAd(to container: UIView) {
+        super.attachAd(to: container)
         
-        let wrapper = adViewCell.wrapper ?? adViewCell.contentView
         guard let nativeAd = self.nativeAd, let adView = self.adViewRecycler.obtainAdView(identifier: AdViewRecycler.AD_VIEW_FB) as? FBNativeAdView else {
             return
         }
@@ -50,7 +49,7 @@ public class LoadFbNativeAdTask: LoadAdTask {
             fbNativeAd.registerView(forInteraction: adView, mediaView: adView.mediaView, iconView: adView.iconView, viewController: self.rootViewController, clickableViews: clickableViews)
         }
         adView.removeFromSuperview()
-        wrapper.addSubview(adView)
+        container.addSubview(adView)
         adView.constrainToParent()
     }
     

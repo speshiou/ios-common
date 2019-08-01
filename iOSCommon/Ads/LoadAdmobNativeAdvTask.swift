@@ -33,16 +33,15 @@ public class LoadAdmobNativeAdvTask: LoadAdTask {
         }
     }
     
-    override func attachAd(to adViewCell: AdViewCell) {
-        super.attachAd(to: adViewCell)
-        let wrapper = adViewCell.wrapper ?? adViewCell.contentView
+    override func attachAd(to container: UIView) {
+        super.attachAd(to: container)
         if let nativeAd = self.nativeAd, let adView = self.adViewRecycler.obtainAdView(identifier: AdViewRecycler.AD_VIEW_GOOGLE) as? AdmobNativeAdView {
             self.populateAdView(adView: adView, nativeAd: nativeAd)
-            wrapper.addSubview(adView)
+            container.addSubview(adView)
             adView.constrainToParent()
         } else if let dfpBannerView = self.dfpBannerView {
             dfpBannerView.removeFromSuperview()
-            wrapper.addSubview(dfpBannerView)
+            container.addSubview(dfpBannerView)
             dfpBannerView.constrainToParent()
         }
     }
