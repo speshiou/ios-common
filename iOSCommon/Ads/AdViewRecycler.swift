@@ -42,36 +42,30 @@ public class AdViewRecycler {
     }
     
     func obtainAdView(identifier: String) -> UIView? {
-        var views = adViewMap[identifier]
-        if views == nil {
-            views = [UIView]()
-            adViewMap[identifier] = views
-        }
+        var views = adViewMap[identifier] ?? [UIView]()
         var reusedAdView: UIView?
-        if var views = views {
-            for view in views {
-                if view.superview == nil {
-                    reusedAdView = view
-                    break
-                }
-            }
-            if reusedAdView == nil {
-                let width = min(UIScreen.main.bounds.width, UIScreen.main.bounds.height)
-                switch (identifier) {
-                case AdViewRecycler.AD_VIEW_FB:
-                    reusedAdView = FBNativeAdView(nibName: self.fbNativeAdViewNibName)
-                    break
-                case AdViewRecycler.AD_VIEW_GOOGLE:
-                    reusedAdView = AdmobNativeAdView(nibName: self.admobNativeAdViewNibName)
-                    break
-                default:
-                    break
-                }
-                if let adView = reusedAdView {
-                    views.append(adView)
-                }
+        for view in views {
+            if view.superview == nil {
+                reusedAdView = view
+                break
             }
         }
+        if reusedAdView == nil {
+            switch (identifier) {
+            case AdViewRecycler.AD_VIEW_FB:
+                reusedAdView = FBNativeAdView(nibName: self.fbNativeAdViewNibName)
+                break
+            case AdViewRecycler.AD_VIEW_GOOGLE:
+                reusedAdView = AdmobNativeAdView(nibName: self.admobNativeAdViewNibName)
+                break
+            default:
+                break
+            }
+            if let adView = reusedAdView {
+                views.append(adView)
+            }
+        }
+        adViewMap[identifier] = views
         return reusedAdView
     }
 }
