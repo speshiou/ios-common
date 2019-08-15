@@ -9,9 +9,11 @@
 import Foundation
 
 class PodHelper {
+    static let podName = "iOSCommon"
+    
     static let bundle = { () -> Bundle in
         let frameworkBundle = Bundle(for: AdViewRecycler.self)
-        let bundleURL = frameworkBundle.resourceURL?.appendingPathComponent("iOSCommon.bundle")
+        let bundleURL = frameworkBundle.resourceURL?.appendingPathComponent("\(PodHelper.podName).bundle")
         return Bundle(url: bundleURL!)!
     }()
 }
