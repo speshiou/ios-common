@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EmptyView" customModule="iOSCommon" customModuleProvider="target">
+            <connections>
+                <outlet property="actionButton" destination="VgK-fR-ygk" id="AU6-Ll-ogT"/>
+                <outlet property="iconImageView" destination="bMg-Kc-Fop" id="Gdh-BP-QPH"/>
+                <outlet property="infoLabel" destination="Os2-rQ-B6V" id="tgA-Lw-cfE"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="336"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="K5c-fA-9Ua">
+                    <rect key="frame" x="40" y="109" width="295" height="118.5"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bMg-Kc-Fop">
+                            <rect key="frame" x="129.5" y="0.0" width="36" height="36"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="36" id="4pl-Fo-Tpu"/>
+                                <constraint firstAttribute="height" constant="36" id="Rv5-gR-nzh"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Os2-rQ-B6V">
+                            <rect key="frame" x="126.5" y="52" width="42" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VgK-fR-ygk">
+                            <rect key="frame" x="118.5" y="88.5" width="58" height="30"/>
+                            <inset key="contentEdgeInsets" minX="10" minY="6" maxX="10" maxY="6"/>
+                            <state key="normal" title="Login"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="didClickActionButton:" destination="-1" eventType="touchUpInside" id="AqY-6o-e0b"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="K5c-fA-9Ua" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="40" id="4KQ-Ch-5LC"/>
+                <constraint firstItem="K5c-fA-9Ua" firstAttribute="top" relation="greaterThanOrEqual" secondItem="vUN-kp-3ea" secondAttribute="top" constant="40" id="5OU-PE-Mkw"/>
+                <constraint firstItem="K5c-fA-9Ua" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="Ajj-X6-87i"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="K5c-fA-9Ua" secondAttribute="trailing" constant="40" id="R2t-iY-Ztp"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="K5c-fA-9Ua" secondAttribute="bottom" constant="40" id="i2D-Ue-7ps"/>
+                <constraint firstItem="K5c-fA-9Ua" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="kFK-nl-v0N"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="130.40000000000001" y="-29.685157421289357"/>
+        </view>
+    </objects>
+</document>

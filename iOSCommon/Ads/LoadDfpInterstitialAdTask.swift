@@ -27,7 +27,7 @@ public class LoadDfpInterstitialAdTask: LoadInterstitialAdTask {
         interstitialAd?.load(adRequest)
     }
     
-    override func show() {
+    override public func show() {
         super.show()
         guard let vc = self.rootViewController else {
             return
@@ -43,7 +43,7 @@ public class LoadDfpInterstitialAdTask: LoadInterstitialAdTask {
         return !isAdLoaded()
     }
     
-    override func isAdLoaded() -> Bool {
+    override public func isAdLoaded() -> Bool {
         return interstitialAd?.isReady ?? false
     }
 }

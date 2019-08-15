@@ -8,7 +8,7 @@
 
 import UIKit
 
-class XibView: UIView {
+open class XibView: UIView {
     
     lazy var className: String? = {
         let instanceInfo = String(describing: self)
@@ -33,7 +33,7 @@ class XibView: UIView {
         loadViewFromNib()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         loadViewFromNib()
     }

@@ -38,7 +38,7 @@ public class AdCompat {
         }
     }
     
-    class func parseBannerSizes(_ s: String) -> [GADAdSize] {
+    class public func parseBannerSizes(_ s: String) -> [GADAdSize] {
         let bannerSizes = s.split(separator: ",").map {
             (size) -> String in
             return size.trimmingCharacters(in: .whitespacesAndNewlines)

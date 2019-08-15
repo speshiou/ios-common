@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C00197E922F13FC900E6E3D9 /* EmptyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C00197E822F13FC900E6E3D9 /* EmptyView.xib */; };
+		C00197EB22F1400200E6E3D9 /* EmptyViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C00197EA22F1400200E6E3D9 /* EmptyViewCell.xib */; };
 		C04871BE22E6EFA300473E05 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04871BD22E6EFA300473E05 /* BaseTableViewController.swift */; };
 		C04871C022E6EFC500473E05 /* LoadMoreHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04871BF22E6EFC500473E05 /* LoadMoreHelper.swift */; };
 		C04871C222E6F01200473E05 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04871C122E6F01200473E05 /* EmptyView.swift */; };
@@ -43,6 +45,7 @@
 		C09E482022E5713B00BF37B6 /* iOSCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C09E481622E5713B00BF37B6 /* iOSCommon.framework */; };
 		C09E482522E5713B00BF37B6 /* iOSCommonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09E482422E5713B00BF37B6 /* iOSCommonTests.swift */; };
 		C09E482722E5713B00BF37B6 /* iOSCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = C09E481922E5713B00BF37B6 /* iOSCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C0A8BC2522F1435000E4C675 /* EmptyViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A8BC2422F1435000E4C675 /* EmptyViewCell.swift */; };
 		F1169D9E6DA9C7C3BEFB76B3 /* Pods_iOSCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7940830095FF903CE9368274 /* Pods_iOSCommon.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +63,8 @@
 		58D3B83298FA2CEBAFCFECAE /* Pods-iOSCommon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSCommon.debug.xcconfig"; path = "Target Support Files/Pods-iOSCommon/Pods-iOSCommon.debug.xcconfig"; sourceTree = "<group>"; };
 		7940830095FF903CE9368274 /* Pods_iOSCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0A8FFEA2C114B9B4D8C7843 /* Pods-iOSCommon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSCommon.release.xcconfig"; path = "Target Support Files/Pods-iOSCommon/Pods-iOSCommon.release.xcconfig"; sourceTree = "<group>"; };
+		C00197E822F13FC900E6E3D9 /* EmptyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyView.xib; sourceTree = "<group>"; };
+		C00197EA22F1400200E6E3D9 /* EmptyViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyViewCell.xib; sourceTree = "<group>"; };
 		C04871BD22E6EFA300473E05 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		C04871BF22E6EFC500473E05 /* LoadMoreHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadMoreHelper.swift; sourceTree = "<group>"; };
 		C04871C122E6F01200473E05 /* EmptyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
@@ -99,6 +104,7 @@
 		C09E481F22E5713B00BF37B6 /* iOSCommonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSCommonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C09E482422E5713B00BF37B6 /* iOSCommonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSCommonTests.swift; sourceTree = "<group>"; };
 		C09E482622E5713B00BF37B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0A8BC2422F1435000E4C675 /* EmptyViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +150,9 @@
 				C04871BD22E6EFA300473E05 /* BaseTableViewController.swift */,
 				C04871BF22E6EFC500473E05 /* LoadMoreHelper.swift */,
 				C04871C122E6F01200473E05 /* EmptyView.swift */,
+				C00197E822F13FC900E6E3D9 /* EmptyView.xib */,
+				C00197EA22F1400200E6E3D9 /* EmptyViewCell.xib */,
+				C0A8BC2422F1435000E4C675 /* EmptyViewCell.swift */,
 				C086FA2522E57BD1002BF3F6 /* XibView.swift */,
 			);
 			path = UI;
@@ -330,6 +339,8 @@
 				C086FA0B22E57BBE002BF3F6 /* FbNativeAdView.xib in Resources */,
 				C086FA1422E57BBE002BF3F6 /* AdmobNativeAdView.xib in Resources */,
 				C086FA1622E57BBE002BF3F6 /* AdmobNativeAdViewBanner.xib in Resources */,
+				C00197E922F13FC900E6E3D9 /* EmptyView.xib in Resources */,
+				C00197EB22F1400200E6E3D9 /* EmptyViewCell.xib in Resources */,
 				C086FA0922E57BBE002BF3F6 /* FBNativeBannerAdView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,6 +412,7 @@
 				C086FA1F22E57BBE002BF3F6 /* InterstitialAdManager.swift in Sources */,
 				C086FA1E22E57BBE002BF3F6 /* FBNativeAdView.swift in Sources */,
 				C086FA1D22E57BBE002BF3F6 /* AdRecycler.swift in Sources */,
+				C0A8BC2522F1435000E4C675 /* EmptyViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -23,7 +23,7 @@ public class LoadAdMobInterstitialAdTask: LoadInterstitialAdTask {
         interstitialAd?.load(GADRequest())
     }
     
-    override func show() {
+    override public func show() {
         super.show()
         guard let vc = self.rootViewController else {
             return
@@ -39,7 +39,7 @@ public class LoadAdMobInterstitialAdTask: LoadInterstitialAdTask {
         return !isAdLoaded()
     }
     
-    override func isAdLoaded() -> Bool {
+    override public func isAdLoaded() -> Bool {
         return interstitialAd?.isReady ?? false
     }
 }

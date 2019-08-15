@@ -8,8 +8,8 @@
 
 import Foundation
 
-class AdUtils {
-    class func insertAdData(adRecycler: AdRecycler, data: [Any], adPositions: [Int], adType: String, adId: String) -> [Any] {
+public class AdUtils {
+    public class func insertAdData(adRecycler: AdRecycler, data: [Any], adPositions: [Int], adType: String, adId: String) -> [Any] {
         if (!data.isEmpty && AdType.allTypes.contains(adType) && !adPositions.isEmpty && !adType.isEmpty && !adId.isEmpty) {
             var updatedData = [Any]()
             updatedData += data
@@ -65,7 +65,7 @@ class AdUtils {
     }
     
     static let PRELOAD_AD_AHEAD = 10
-    class func preloadAds(data: [Any], from position: Int) -> Void {
+    public class func preloadAds(data: [Any], from position: Int) -> Void {
         let adPreloadStart = position < PRELOAD_AD_AHEAD ? position : position + PRELOAD_AD_AHEAD - 1
         for adPos in adPreloadStart..<position + PRELOAD_AD_AHEAD {
             if adPos >= 0 && adPos < data.count {

@@ -11,7 +11,7 @@ import UIKit
 
 public class LoadInterstitialAdTask: NSObject {
     
-    weak var delegate: InterstitialAdListener?
+    public weak var delegate: InterstitialAdListener?
     weak var rootViewController: UIViewController?
     var adType = ""
     var adId = ""
@@ -22,7 +22,7 @@ public class LoadInterstitialAdTask: NSObject {
         self.rootViewController = rootViewController
     }
     
-    func load() {
+    public func load() {
         onLoad()
     }
     
@@ -34,7 +34,7 @@ public class LoadInterstitialAdTask: NSObject {
         
     }
     
-    func show() {
+    public func show() {
         
     }
     
@@ -42,7 +42,7 @@ public class LoadInterstitialAdTask: NSObject {
         return true
     }
     
-    func isAdLoaded() -> Bool {
+    public func isAdLoaded() -> Bool {
         return false
     }
 }

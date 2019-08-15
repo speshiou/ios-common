@@ -8,13 +8,13 @@
 
 import UIKit
 
-class EmptyView: XibView {
+open class EmptyView: XibView {
 
-    @IBOutlet weak var iconImageView: UIImageView!
-    @IBOutlet weak var infoLabel: UILabel!
-    @IBOutlet weak var actionButton: UIButton!
+    @IBOutlet public weak var iconImageView: UIImageView!
+    @IBOutlet public weak var infoLabel: UILabel!
+    @IBOutlet public weak var actionButton: UIButton!
     
-    var actionButtonClickDelegate: (() -> Void)?
+    public var actionButtonClickDelegate: (() -> Void)?
     
     @IBAction func didClickActionButton(_ sender: Any) {
         self.actionButtonClickDelegate?()

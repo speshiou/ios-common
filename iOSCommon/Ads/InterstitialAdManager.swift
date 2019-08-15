@@ -9,9 +9,9 @@
 import Foundation
 import UIKit
 
-class InterstitialAdManager {
+public class InterstitialAdManager {
     
-    class func createLoadAdTask(rootViewController: UIViewController, adType: String, unitId: String) -> LoadInterstitialAdTask? {
+    public class func createLoadAdTask(rootViewController: UIViewController, adType: String, unitId: String) -> LoadInterstitialAdTask? {
         var task: LoadInterstitialAdTask? = nil
         let unitId = unitId.trimmingCharacters(in: .whitespacesAndNewlines)
         if !unitId.isEmpty {

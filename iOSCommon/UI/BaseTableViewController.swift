@@ -11,13 +11,13 @@ import UIKit
 open class BaseTableViewController: UITableViewController {
     
     public static let CELL_ID_EMPTY_VIEW = "EmptyViewCell"
+    public static let KEY_PAGE = "key_page"
     
     static let CELL_TYPE_DATA = -1
     static let CELL_TYPE_LOAD_MORE = -2
-    static let KEY_PAGE = "key_page"
     open var preloadMoreAhead = 10
     
-    weak var scrollDelegate: BaseTableViewControllerScrollDelegate?
+    public weak var scrollDelegate: BaseTableViewControllerScrollDelegate?
     
     var cachedCellHeights = [ Int: [CGFloat?]]()
     
@@ -41,7 +41,7 @@ open class BaseTableViewController: UITableViewController {
     
     let loadMoreHelper = LoadMoreHelper()
     
-    var emptyView: EmptyView? {
+    public var emptyView: EmptyView? {
         didSet {
             if let emptyView = self.emptyView {
                 emptyView.translatesAutoresizingMaskIntoConstraints = false
@@ -92,7 +92,7 @@ open class BaseTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
-    @objc func didRefresh(_ refreshControl: UIRefreshControl) {
+    @objc open func didRefresh(_ refreshControl: UIRefreshControl) {
         refreshControl.endRefreshing()
     }
     
@@ -238,7 +238,7 @@ open class BaseTableViewController: UITableViewController {
         self.cachedCellHeights.removeAll()
     }
     
-    func insertRows(at indexPaths: [IndexPath], with animation: UITableView.RowAnimation) {
+    public func insertRows(at indexPaths: [IndexPath], with animation: UITableView.RowAnimation) {
         for indexPath in indexPaths {
             if var cache = self.cachedCellHeights[indexPath.section] {
                 if indexPath.row <= cache.count {
@@ -250,7 +250,7 @@ open class BaseTableViewController: UITableViewController {
         self.tableView.insertRows(at: indexPaths, with: animation)
     }
     
-    func deleteRows(at indexPaths: [IndexPath], with animation: UITableView.RowAnimation) {
+    public func deleteRows(at indexPaths: [IndexPath], with animation: UITableView.RowAnimation) {
         for indexPath in indexPaths {
             if var cache = self.cachedCellHeights[indexPath.section] {
                 if indexPath.row < cache.count {
@@ -262,7 +262,7 @@ open class BaseTableViewController: UITableViewController {
         self.tableView.deleteRows(at: indexPaths, with: animation)
     }
     
-    func reloadRows(at indexPaths: [IndexPath]) {
+    public func reloadRows(at indexPaths: [IndexPath]) {
         guard !indexPaths.isEmpty else {
             return
         }
@@ -376,7 +376,7 @@ extension BaseTableViewController: LoadAdTaskDelegate {
     }
 }
 
-protocol BaseTableViewControllerScrollDelegate: class {
+public protocol BaseTableViewControllerScrollDelegate: class {
     func scrollViewDidScrollUp()
     func scrollViewDidScrollDown()
 }

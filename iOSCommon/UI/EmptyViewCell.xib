@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="yGM-tZ-N7s" customClass="EmptyViewCell" customModule="iOSCommon" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yGM-tZ-N7s" id="tNM-4S-0SQ">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bF3-8E-8PK" customClass="EmptyView" customModule="iOSCommon" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="bF3-8E-8PK" firstAttribute="top" secondItem="tNM-4S-0SQ" secondAttribute="top" id="J8C-tV-Nfo"/>
+                    <constraint firstItem="bF3-8E-8PK" firstAttribute="leading" secondItem="tNM-4S-0SQ" secondAttribute="leading" id="hha-ot-y7r"/>
+                    <constraint firstAttribute="bottom" secondItem="bF3-8E-8PK" secondAttribute="bottom" id="mpi-D3-Orq"/>
+                    <constraint firstAttribute="trailing" secondItem="bF3-8E-8PK" secondAttribute="trailing" id="xAo-bI-UPN"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="emptyView" destination="bF3-8E-8PK" id="GSx-P1-Xgm"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>
