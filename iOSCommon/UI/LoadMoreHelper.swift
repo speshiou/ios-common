@@ -34,6 +34,7 @@ class LoadMoreHelper {
     func loadData(section: Int) -> [String: Any]? {
         if let record = self.loadMoreRecords[section] {
             record.isLoading = true
+            self.loadMoreRecords[section] = record
             return record.bundle
         }
         return nil

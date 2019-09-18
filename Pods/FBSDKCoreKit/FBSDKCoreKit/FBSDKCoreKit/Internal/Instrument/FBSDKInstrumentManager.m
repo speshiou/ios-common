@@ -16,8 +16,31 @@
 // IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 // CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-#import <Foundation/Foundation.h>
+#import "FBSDKInstrumentManager.h"
 
-@interface FBSDKBasicUtility : NSObject
+#import "FBSDKCrashObserver.h"
+#import "FBSDKErrorReport.h"
+#import "FBSDKFeatureManager.h"
+#import "FBSDKSettings.h"
+
+@implementation FBSDKInstrumentManager
+
++ (void)enable
+{
+  if (![FBSDKSettings isAutoLogAppEventsEnabled]) {
+    return;
+  }
+
+  [FBSDKFeatureManager checkFeature:FBSDKFeatureCrashReport completionBlock:^(BOOL enabled) {
+    if (enabled) {
+      [FBSDKCrashObserver enable];
+    }
+  }];
+  [FBSDKFeatureManager checkFeature:FBSDKFeatureErrorReport completionBlock:^(BOOL enabled) {
+    if (enabled) {
+      [FBSDKErrorReport enable];
+    }
+  }];
+}
 
 @end

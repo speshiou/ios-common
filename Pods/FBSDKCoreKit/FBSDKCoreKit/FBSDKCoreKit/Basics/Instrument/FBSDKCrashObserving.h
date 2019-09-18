@@ -18,23 +18,17 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void (^FBSDKURLSessionTaskBlock)(NSError *error,
-                                         NSURLResponse *response,
-                                         NSData *responseData)
-NS_SWIFT_NAME(URLSessionTaskBlock);
+NS_ASSUME_NONNULL_BEGIN
 
-NS_SWIFT_NAME(URLSessionTask)
-@interface FBSDKURLSessionTask : NSObject
+@protocol FBSDKCrashObserving <NSObject>
 
-- (instancetype)init NS_UNAVAILABLE;
-+ (instancetype)new NS_UNAVAILABLE;
+@property (nonatomic, copy) NSArray<NSString *> *prefixes;
+@property (nonatomic, copy, nullable) NSArray<NSString *> *frameworks;
 
-- (instancetype)initWithRequest:(NSURLRequest *)request
-                    fromSession:(NSURLSession *)session
-              completionHandler:(FBSDKURLSessionTaskBlock)handler
-NS_DESIGNATED_INITIALIZER;
+@optional
 
-- (void)cancel;
-- (void)start;
+- (void)didReceiveCrashLogs:(NSArray<NSDictionary<NSString *, id> *> *)crashLogs;
 
 @end
+
+NS_ASSUME_NONNULL_END
