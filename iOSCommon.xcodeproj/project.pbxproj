@@ -46,6 +46,7 @@
 		C09E482522E5713B00BF37B6 /* iOSCommonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09E482422E5713B00BF37B6 /* iOSCommonTests.swift */; };
 		C09E482722E5713B00BF37B6 /* iOSCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = C09E481922E5713B00BF37B6 /* iOSCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C0A8BC2522F1435000E4C675 /* EmptyViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A8BC2422F1435000E4C675 /* EmptyViewCell.swift */; };
+		C0C1F5E12345A191004B3C4F /* TintedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C1F5E02345A191004B3C4F /* TintedButton.swift */; };
 		F1169D9E6DA9C7C3BEFB76B3 /* Pods_iOSCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7940830095FF903CE9368274 /* Pods_iOSCommon.framework */; };
 /* End PBXBuildFile section */
 
@@ -105,6 +106,7 @@
 		C09E482422E5713B00BF37B6 /* iOSCommonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSCommonTests.swift; sourceTree = "<group>"; };
 		C09E482622E5713B00BF37B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0A8BC2422F1435000E4C675 /* EmptyViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyViewCell.swift; sourceTree = "<group>"; };
+		C0C1F5E02345A191004B3C4F /* TintedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TintedButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 				C00197EA22F1400200E6E3D9 /* EmptyViewCell.xib */,
 				C0A8BC2422F1435000E4C675 /* EmptyViewCell.swift */,
 				C086FA2522E57BD1002BF3F6 /* XibView.swift */,
+				C0C1F5E02345A191004B3C4F /* TintedButton.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -409,6 +412,7 @@
 				C086FA2822E57BDA002BF3F6 /* UIView+Extension.swift in Sources */,
 				C086FA2222E57BBE002BF3F6 /* LoadAdTaskAdapter.swift in Sources */,
 				C086FA2022E57BBE002BF3F6 /* InterstitialAdListener.swift in Sources */,
+				C0C1F5E12345A191004B3C4F /* TintedButton.swift in Sources */,
 				C086FA1F22E57BBE002BF3F6 /* InterstitialAdManager.swift in Sources */,
 				C086FA1E22E57BBE002BF3F6 /* FBNativeAdView.swift in Sources */,
 				C086FA1D22E57BBE002BF3F6 /* AdRecycler.swift in Sources */,
