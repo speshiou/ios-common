@@ -87,7 +87,7 @@ public class LoadAdTask: Operation {
         self.attachAd(to: wrapper)
     }
     
-    func attachAd(to container: UIView) {
+    public func attachAd(to container: UIView) {
         
     }
     

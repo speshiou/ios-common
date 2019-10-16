@@ -9,8 +9,10 @@
 import Foundation
 
 public class AdUtils {
+    public static var adEnabled = true
+    
     public class func insertAdData(adRecycler: AdRecycler, data: [Any], adPositions: [Int], adType: String, adId: String) -> [Any] {
-        if (!data.isEmpty && AdType.allTypes.contains(adType) && !adPositions.isEmpty && !adType.isEmpty && !adId.isEmpty) {
+        if AdUtils.adEnabled && !data.isEmpty && AdType.allTypes.contains(adType) && !adPositions.isEmpty && !adType.isEmpty && !adId.isEmpty {
             var updatedData = [Any]()
             updatedData += data
             var admobTask: LoadAdTask? = nil

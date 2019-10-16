@@ -27,7 +27,7 @@ public class LoadFbNativeAdTask: LoadAdTask {
         self.pendingNativeAd = nativeAd
     }
     
-    override func attachAd(to container: UIView) {
+    override public func attachAd(to container: UIView) {
         super.attachAd(to: container)
         
         guard let nativeAd = self.nativeAd, let adView = self.adViewRecycler.obtainAdView(identifier: AdViewRecycler.AD_VIEW_FB) as? FBNativeAdView else {

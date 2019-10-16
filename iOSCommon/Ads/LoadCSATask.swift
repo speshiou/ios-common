@@ -74,7 +74,7 @@ public class LoadCSATask: LoadAdTask, GADBannerViewDelegate, GADAdSizeDelegate {
         self.pendingBannerView = bannerView
     }
     
-    override func attachAd(to container: UIView) {
+    override public func attachAd(to container: UIView) {
         super.attachAd(to: container)
         
         guard let bannerView = bannerView else {
