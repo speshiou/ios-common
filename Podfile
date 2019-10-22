@@ -7,5 +7,4 @@ target 'iOSCommon' do
 	pod 'Firebase/AdMob'
 	pod 'FacebookCore'
 	pod 'FBAudienceNetwork'
-	pod 'Kingfisher'
 end

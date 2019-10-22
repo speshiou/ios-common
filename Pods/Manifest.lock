@@ -77,7 +77,6 @@ PODS:
     - GoogleUtilities/Logger
   - GoogleUtilities/UserDefaults (6.3.1):
     - GoogleUtilities/Logger
-  - Kingfisher (4.10.1)
   - nanopb (0.3.901):
     - nanopb/decode (= 0.3.901)
     - nanopb/encode (= 0.3.901)
@@ -90,7 +89,6 @@ DEPENDENCIES:
   - Firebase/AdMob
   - Firebase/Analytics
   - GoogleMobileAdsMediationFacebook
-  - Kingfisher
 
 SPEC REPOS:
   trunk:
@@ -109,7 +107,6 @@ SPEC REPOS:
     - GoogleDataTransportCCTSupport
     - GoogleMobileAdsMediationFacebook
     - GoogleUtilities
-    - Kingfisher
     - nanopb
 
 SPEC CHECKSUMS:
@@ -128,9 +125,8 @@ SPEC CHECKSUMS:
   GoogleDataTransportCCTSupport: f6ab1962e9dc05ab1fb938b795e5b310209edeec
   GoogleMobileAdsMediationFacebook: ceceecd3bdefeaa0e050bd6101679a8d7425233b
   GoogleUtilities: f895fde57977df4e0233edda0dbeac490e3703b6
-  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
 
-PODFILE CHECKSUM: 2d089b4574111566acafe524bede1940642ee93f
+PODFILE CHECKSUM: af6777db9ab51109ab237bcb75ae878587e80807
 
 COCOAPODS: 1.8.4
