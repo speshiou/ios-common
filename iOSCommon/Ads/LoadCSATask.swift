@@ -50,22 +50,9 @@ public class LoadCSATask: LoadAdTask, GADBannerViewDelegate, GADAdSizeDelegate {
         }
         adRequest.numberOfAds = 1
         adRequest.adPage = page
-        adRequest.cssWidth = "\(width)"
-        adRequest.sellerRatingsExtensionEnabled = true
-        adRequest.boldTitleEnabled = true
-        adRequest.titleFontSize = 16
-        adRequest.titleLinkColor = "#141823"
-        adRequest.textColor = "#3C3F45"
-        adRequest.titleUnderlineHidden = true
-        adRequest.longerHeadlinesExtensionEnabled = false
-        adRequest.locationExtensionEnabled = false
-        adRequest.siteLinksExtensionEnabled = false
-        adRequest.sellerRatingsExtensionEnabled = false
-        adRequest.detailedAttributionExtensionEnabled = false
-        adRequest.domainLinkColor = "#9197A3"
-        adRequest.clickToCallExtensionEnabled = false
-        adRequest.setAdvancedOptionValue("false", forKey: "detailedAttribution")
-        adRequest.setAdvancedOptionValue("false", forKey: "domainLinkAboveDescription")
+        if unitIds.count > 2 {
+            adRequest.setAdvancedOptionValue(unitIds[2], forKey: "styleId")
+        }
         //        adRequest.testDevices = [ kGADSimulatorID ]
         bannerView.translatesAutoresizingMaskIntoConstraints = false
         self.heightConstraint = bannerView.heightAnchor.constraint(equalToConstant: 0)
