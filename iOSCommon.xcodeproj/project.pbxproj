@@ -10,6 +10,11 @@
 		C00197E922F13FC900E6E3D9 /* EmptyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C00197E822F13FC900E6E3D9 /* EmptyView.xib */; };
 		C00197EB22F1400200E6E3D9 /* EmptyViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C00197EA22F1400200E6E3D9 /* EmptyViewCell.xib */; };
 		C0090D62235EF245002EFB6B /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = C0090D61235EF245002EFB6B /* Kingfisher */; };
+		C00A8E0523B3555600CCD60C /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00A8E0423B3555600CCD60C /* TextView.swift */; };
+		C00A8E0723B3570000CCD60C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00A8E0623B3570000CCD60C /* BaseViewController.swift */; };
+		C00A8E0B23B359B700CCD60C /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00A8E0A23B359B700CCD60C /* AlertController.swift */; };
+		C00A8E0F23B35B8E00CCD60C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C00A8E1123B35B8E00CCD60C /* Localizable.strings */; };
+		C00A8E1423B35CBD00CCD60C /* i18n.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00A8E1323B35CBC00CCD60C /* i18n.swift */; };
 		C04871BE22E6EFA300473E05 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04871BD22E6EFA300473E05 /* BaseTableViewController.swift */; };
 		C04871C022E6EFC500473E05 /* LoadMoreHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04871BF22E6EFC500473E05 /* LoadMoreHelper.swift */; };
 		C04871C222E6F01200473E05 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04871C122E6F01200473E05 /* EmptyView.swift */; };
@@ -67,6 +72,12 @@
 		B0A8FFEA2C114B9B4D8C7843 /* Pods-iOSCommon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSCommon.release.xcconfig"; path = "Target Support Files/Pods-iOSCommon/Pods-iOSCommon.release.xcconfig"; sourceTree = "<group>"; };
 		C00197E822F13FC900E6E3D9 /* EmptyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyView.xib; sourceTree = "<group>"; };
 		C00197EA22F1400200E6E3D9 /* EmptyViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyViewCell.xib; sourceTree = "<group>"; };
+		C00A8E0423B3555600CCD60C /* TextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
+		C00A8E0623B3570000CCD60C /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		C00A8E0A23B359B700CCD60C /* AlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
+		C00A8E1023B35B8E00CCD60C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		C00A8E1223B35B9600CCD60C /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		C00A8E1323B35CBC00CCD60C /* i18n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = i18n.swift; sourceTree = "<group>"; };
 		C04871BD22E6EFA300473E05 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		C04871BF22E6EFC500473E05 /* LoadMoreHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadMoreHelper.swift; sourceTree = "<group>"; };
 		C04871C122E6F01200473E05 /* EmptyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
@@ -151,6 +162,7 @@
 		C086F9E022E57AC8002BF3F6 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				C00A8E0623B3570000CCD60C /* BaseViewController.swift */,
 				C04871BD22E6EFA300473E05 /* BaseTableViewController.swift */,
 				C04871BF22E6EFC500473E05 /* LoadMoreHelper.swift */,
 				C04871C122E6F01200473E05 /* EmptyView.swift */,
@@ -159,6 +171,8 @@
 				C0A8BC2422F1435000E4C675 /* EmptyViewCell.swift */,
 				C086FA2522E57BD1002BF3F6 /* XibView.swift */,
 				C0C1F5E02345A191004B3C4F /* TintedButton.swift */,
+				C00A8E0423B3555600CCD60C /* TextView.swift */,
+				C00A8E0A23B359B700CCD60C /* AlertController.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -233,7 +247,9 @@
 				C086F9E022E57AC8002BF3F6 /* UI */,
 				C09E481922E5713B00BF37B6 /* iOSCommon.h */,
 				C09E481A22E5713B00BF37B6 /* Info.plist */,
+				C00A8E1323B35CBC00CCD60C /* i18n.swift */,
 				C097C80022E6CB30003D0761 /* PodHelper.swift */,
+				C00A8E1123B35B8E00CCD60C /* Localizable.strings */,
 			);
 			path = iOSCommon;
 			sourceTree = "<group>";
@@ -326,6 +342,9 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
+				"zh-Hant",
+				"zh-Hans",
 			);
 			mainGroup = C09E480C22E5713A00BF37B6;
 			packageReferences = (
@@ -351,6 +370,7 @@
 				C086FA1422E57BBE002BF3F6 /* AdmobNativeAdView.xib in Resources */,
 				C086FA1622E57BBE002BF3F6 /* AdmobNativeAdViewBanner.xib in Resources */,
 				C00197E922F13FC900E6E3D9 /* EmptyView.xib in Resources */,
+				C00A8E0F23B35B8E00CCD60C /* Localizable.strings in Resources */,
 				C00197EB22F1400200E6E3D9 /* EmptyViewCell.xib in Resources */,
 				C086FA0922E57BBE002BF3F6 /* FBNativeBannerAdView.xib in Resources */,
 			);
@@ -406,12 +426,16 @@
 				C086FA1222E57BBE002BF3F6 /* AdmobNativeAdView.swift in Sources */,
 				C086FA1922E57BBE002BF3F6 /* LoadAdTaskDelegate.swift in Sources */,
 				C086FA0A22E57BBE002BF3F6 /* InterstitialAdType.swift in Sources */,
+				C00A8E1423B35CBD00CCD60C /* i18n.swift in Sources */,
+				C00A8E0523B3555600CCD60C /* TextView.swift in Sources */,
 				C086FA2622E57BD2002BF3F6 /* XibView.swift in Sources */,
+				C00A8E0723B3570000CCD60C /* BaseViewController.swift in Sources */,
 				C04871C222E6F01200473E05 /* EmptyView.swift in Sources */,
 				C086FA1722E57BBE002BF3F6 /* AdViewRecycler.swift in Sources */,
 				C086FA2422E57BBE002BF3F6 /* LoadDfpBannerAdTask.swift in Sources */,
 				C086FA2322E57BBE002BF3F6 /* LoadAdTask.swift in Sources */,
 				C086FA0822E57BBE002BF3F6 /* LoadAdmobNativeAdvTask.swift in Sources */,
+				C00A8E0B23B359B700CCD60C /* AlertController.swift in Sources */,
 				C04871C022E6EFC500473E05 /* LoadMoreHelper.swift in Sources */,
 				C086FA2122E57BBE002BF3F6 /* AdViewCell.swift in Sources */,
 				C086FA1522E57BBE002BF3F6 /* AdUtils.swift in Sources */,
@@ -445,6 +469,18 @@
 			targetProxy = C09E482122E5713B00BF37B6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C00A8E1123B35B8E00CCD60C /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C00A8E1023B35B8E00CCD60C /* zh-Hans */,
+				C00A8E1223B35B9600CCD60C /* zh-Hant */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C09E482822E5713B00BF37B6 /* Debug */ = {

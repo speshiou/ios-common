@@ -8,7 +8,7 @@
 
 import Foundation
 
-class AdType {
+open class AdType {
     public static let AD_FB_NATIVE = "FB_NATIVE"
     public static let AD_FB_NATIVE_BANNER = "FB_NATIVE_BANNER"
     public static let AD_DFP = "DFP"
