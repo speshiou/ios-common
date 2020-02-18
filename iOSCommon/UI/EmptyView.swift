@@ -16,6 +16,20 @@ open class EmptyView: XibView {
     
     public var actionButtonClickDelegate: (() -> Void)?
     
+    public var data: EmptyViewData? {
+        didSet {
+            guard let data = self.data else {
+                return
+            }
+            self.iconImageView.isHidden = data.icon == nil
+            self.iconImageView.image = data.icon
+            self.infoLabel.text = data.message
+            self.actionButton.isHidden = data.actionButtonText == nil
+            self.actionButton.setTitle(data.actionButtonText, for: .normal)
+            self.actionButtonClickDelegate = data.actionButtonDidClick
+        }
+    }
+    
     @IBAction func didClickActionButton(_ sender: Any) {
         self.actionButtonClickDelegate?()
     }

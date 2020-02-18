@@ -10,7 +10,7 @@ import UIKit
 
 open class AlertController: UIAlertController {
 
-    var target: Any? {
+    public var target: Any? {
         didSet {
             if let view = self.target as? UIView {
                 if let popover: UIPopoverPresentationController = self.popoverPresentationController {

@@ -76,7 +76,7 @@ open class BaseTableViewController: UITableViewController {
         
         self.tableView.rowHeight = UITableView.automaticDimension
         self.tableView.register(UINib.init(nibName: "LoadMoreCell", bundle: Bundle.main), forCellReuseIdentifier: "loadMoreCell")
-        self.tableView.register(UINib.init(nibName: BaseTableViewController.CELL_ID_EMPTY_VIEW, bundle: Bundle.main), forCellReuseIdentifier: BaseTableViewController.CELL_ID_EMPTY_VIEW)
+        self.tableView.register(UINib.init(nibName: BaseTableViewController.CELL_ID_EMPTY_VIEW, bundle: PodHelper.bundle), forCellReuseIdentifier: BaseTableViewController.CELL_ID_EMPTY_VIEW)
         
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(self.didRefresh(_:)), for: .valueChanged)
