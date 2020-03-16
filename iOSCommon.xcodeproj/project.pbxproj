@@ -15,6 +15,7 @@
 		C00A8E0B23B359B700CCD60C /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00A8E0A23B359B700CCD60C /* AlertController.swift */; };
 		C00A8E0F23B35B8E00CCD60C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C00A8E1123B35B8E00CCD60C /* Localizable.strings */; };
 		C00A8E1423B35CBD00CCD60C /* i18n.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00A8E1323B35CBC00CCD60C /* i18n.swift */; };
+		C0207745241F342100257F0E /* LoadAFSNativeTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0207744241F342000257F0E /* LoadAFSNativeTask.swift */; };
 		C04871BE22E6EFA300473E05 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04871BD22E6EFA300473E05 /* BaseTableViewController.swift */; };
 		C04871C022E6EFC500473E05 /* LoadMoreHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04871BF22E6EFC500473E05 /* LoadMoreHelper.swift */; };
 		C04871C222E6F01200473E05 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04871C122E6F01200473E05 /* EmptyView.swift */; };
@@ -79,6 +80,7 @@
 		C00A8E1023B35B8E00CCD60C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		C00A8E1223B35B9600CCD60C /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		C00A8E1323B35CBC00CCD60C /* i18n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = i18n.swift; sourceTree = "<group>"; };
+		C0207744241F342000257F0E /* LoadAFSNativeTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadAFSNativeTask.swift; sourceTree = "<group>"; };
 		C04871BD22E6EFA300473E05 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		C04871BF22E6EFC500473E05 /* LoadMoreHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadMoreHelper.swift; sourceTree = "<group>"; };
 		C04871C122E6F01200473E05 /* EmptyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 				C086F9FD22E57BBD002BF3F6 /* LoadFbInterstitialAdTask.swift */,
 				C086F9F022E57BBD002BF3F6 /* LoadFbNativeAdTask.swift */,
 				C086F9EF22E57BBD002BF3F6 /* LoadInterstitialAdTask.swift */,
+				C0207744241F342000257F0E /* LoadAFSNativeTask.swift */,
 			);
 			path = Ads;
 			sourceTree = "<group>";
@@ -436,6 +439,7 @@
 				C04871C222E6F01200473E05 /* EmptyView.swift in Sources */,
 				C086FA1722E57BBE002BF3F6 /* AdViewRecycler.swift in Sources */,
 				C086FA2422E57BBE002BF3F6 /* LoadDfpBannerAdTask.swift in Sources */,
+				C0207745241F342100257F0E /* LoadAFSNativeTask.swift in Sources */,
 				C086FA2322E57BBE002BF3F6 /* LoadAdTask.swift in Sources */,
 				C086FA0822E57BBE002BF3F6 /* LoadAdmobNativeAdvTask.swift in Sources */,
 				C00A8E0B23B359B700CCD60C /* AlertController.swift in Sources */,
