@@ -5,6 +5,7 @@ target 'iOSCommon' do
 	pod 'GoogleMobileAdsMediationFacebook'
 	pod 'Firebase/Analytics'
 	pod 'Firebase/AdMob'
+	pod 'Google-AFSNative'
 	pod 'FacebookCore'
 	pod 'FBAudienceNetwork'
 end

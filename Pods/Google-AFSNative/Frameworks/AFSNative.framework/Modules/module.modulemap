@@ -1,0 +1,14 @@
+framework module AFSNative {
+  umbrella header "AFSNative.h"
+  export *
+  module * { export * }
+  link framework "AdSupport"
+  link framework "CFNetwork"
+  link framework "CoreGraphics"
+  link framework "CoreMotion"
+  link framework "QuartzCore"
+  link framework "SafariServices"
+  link framework "Security"
+  link framework "SystemConfiguration"
+  link framework "WebKit"
+}
