@@ -142,5 +142,6 @@ Pod::Spec.new do |spec|
   spec.dependency "Firebase/Analytics"
   spec.dependency "Firebase/AdMob"
   spec.dependency "FBAudienceNetwork"
+  spec.dependency "Google-AFSNative"
 
 end
