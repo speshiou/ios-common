@@ -75,6 +75,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property(nonatomic, readwrite, copy) NSString *testGeolocation;
 
+/** The target language for the ad request.
+ * <p>Languages specified using the Google AdWords API language codes. The
+ * default value is 'en'.*/
+@property(nonatomic, readwrite, copy) NSString *targetLanguage;
+
 @end
 
 NS_ASSUME_NONNULL_END
