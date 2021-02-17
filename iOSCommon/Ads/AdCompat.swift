@@ -65,9 +65,6 @@ public class AdCompat {
             case "WIDE_SKYSCRAPER":
                 sizes.append(kGADAdSizeSkyscraper)
                 break
-            case "SMART_BANNER":
-                sizes.append(kGADAdSizeSmartBannerPortrait)
-                break
             case "FLUID":
                 sizes.append(kGADAdSizeFluid)
                 break

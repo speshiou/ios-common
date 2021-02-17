@@ -2,7 +2,11 @@
 
 @class GANItemInfo;
 
-/** Provides an API for the partner to report purchases from their app. */
+/**
+ * Provides an API for the partner to report purchases from their app.
+ * @deprecated Do not use, supported only for sponsored product ads which have
+ * been discontinued.
+ */
 @interface GANPurchaseReportingController : NSObject
 
 /** The Merchant Center ID for the client app. */

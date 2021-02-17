@@ -9,7 +9,7 @@
 import Foundation
 import GoogleMobileAds
 
-public class LoadCSATask: LoadAdTask, GADBannerViewDelegate, GADAdSizeDelegate {
+public class LoadCSATask: LoadAdTask {
     
     public var size = CGSize.zero
     public var page = -1
@@ -72,13 +72,19 @@ public class LoadCSATask: LoadAdTask, GADBannerViewDelegate, GADAdSizeDelegate {
         bannerView.constrainToParent(insets: UIEdgeInsets(top: 0, left: padding, bottom: 0, right: 0))
     }
     
-    public func adViewDidReceiveAd(_ bannerView: GADBannerView) {
+    
+    
+    
+}
+
+extension LoadCSATask: GADBannerViewDelegate {
+    public func bannerViewDidReceiveAd(_ bannerView: GADBannerView) {
         self.bannerView = bannerView as? GADSearchBannerView
         self.pendingBannerView = nil
         self.didLoad()
     }
     
-    public func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
+    public func bannerView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: Error) {
         NSLog(error.localizedDescription)
         if self.bannerView == nil {
             self.didFail()
@@ -86,7 +92,9 @@ public class LoadCSATask: LoadAdTask, GADBannerViewDelegate, GADAdSizeDelegate {
             self.didLoad()
         }
     }
-    
+}
+
+extension LoadCSATask: GADAdSizeDelegate {
     public func adView(_ bannerView: GADBannerView, willChangeAdSizeTo size: GADAdSize) {
         self.size = size.size
         self.heightConstraint?.constant = self.size.height

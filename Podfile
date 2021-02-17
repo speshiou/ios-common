@@ -2,10 +2,10 @@ platform :ios, '9.0'
 use_frameworks!
 
 target 'iOSCommon' do
-	pod 'GoogleMobileAdsMediationFacebook'
 	pod 'Firebase/Analytics'
-	pod 'Firebase/AdMob'
+	pod 'Google-Mobile-Ads-SDK'
 	pod 'Google-AFSNative'
+	pod 'GoogleMobileAdsMediationFacebook'
 	pod 'FacebookCore'
 	pod 'FBAudienceNetwork'
 end

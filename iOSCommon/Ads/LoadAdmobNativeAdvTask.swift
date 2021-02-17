@@ -12,15 +12,15 @@ import GoogleMobileAds
 public class LoadAdmobNativeAdvTask: LoadAdTask {
     
     var adLoader: GADAdLoader!
-    var nativeAd: GADUnifiedNativeAd?
-    var dfpBannerView: DFPBannerView?
+    var nativeAd: GADNativeAd?
+    var dfpBannerView: GAMBannerView?
     var adCount = 1
     
     override func willLoad() {
         super.willLoad()
-        var adTypes: [GADAdLoaderAdType] = [ .unifiedNative ]
+        var adTypes: [GADAdLoaderAdType] = [ .native ]
         if adType == AdType.AD_DFP || adType == AdType.AD_DFP_BANNER {
-            adTypes.append(.dfpBanner)
+            adTypes.append(.gamBanner)
         }
         let mediaOption = GADNativeAdMediaAdLoaderOptions()
         mediaOption.mediaAspectRatio = .landscape
@@ -29,7 +29,7 @@ public class LoadAdmobNativeAdvTask: LoadAdTask {
         if adType == AdType.AD_ADMOB_NATIVE {
             adLoader.load(GADRequest())
         } else if adType == AdType.AD_DFP || adType == AdType.AD_DFP_BANNER {
-            adLoader.load(DFPRequest())
+            adLoader.load(GAMRequest())
         }
     }
     
@@ -46,7 +46,7 @@ public class LoadAdmobNativeAdvTask: LoadAdTask {
         }
     }
     
-    func populateAdView(adView: AdmobNativeAdView, nativeAd: GADUnifiedNativeAd) {
+    func populateAdView(adView: AdmobNativeAdView, nativeAd: GADNativeAd) {
         adView.nativeAdView.nativeAd = nativeAd
         adView.titleLabel.text = nativeAd.headline
         if let price = nativeAd.price, !price.isEmpty {
@@ -84,7 +84,7 @@ public class LoadAdmobNativeAdvTask: LoadAdTask {
 }
 
 extension LoadAdmobNativeAdvTask: GADAdLoaderDelegate {
-    public func adLoader(_ adLoader: GADAdLoader, didFailToReceiveAdWithError error: GADRequestError) {
+    public func adLoader(_ adLoader: GADAdLoader, didFailToReceiveAdWithError error: Error) {
         NSLog(error.localizedDescription)
         if self.nativeAd == nil && self.dfpBannerView == nil {
             self.didFail()
@@ -94,15 +94,15 @@ extension LoadAdmobNativeAdvTask: GADAdLoaderDelegate {
     }
 }
 
-extension LoadAdmobNativeAdvTask: GADUnifiedNativeAdLoaderDelegate {
-    public func adLoader(_ adLoader: GADAdLoader, didReceive nativeAd: GADUnifiedNativeAd) {
+extension LoadAdmobNativeAdvTask: GADNativeAdLoaderDelegate {
+    public func adLoader(_ adLoader: GADAdLoader, didReceive nativeAd: GADNativeAd) {
         self.nativeAd = nativeAd
         self.dfpBannerView = nil
         self.didLoad()
     }
 }
 
-extension LoadAdmobNativeAdvTask: DFPBannerAdLoaderDelegate {
+extension LoadAdmobNativeAdvTask: GAMBannerAdLoaderDelegate {
     public func validBannerSizes(for adLoader: GADAdLoader) -> [NSValue] {
         var values = [NSValue]()
         for adSize in self.adViewRecycler.dfpBannerAdSizes {
@@ -111,7 +111,7 @@ extension LoadAdmobNativeAdvTask: DFPBannerAdLoaderDelegate {
         return values
     }
     
-    public func adLoader(_ adLoader: GADAdLoader, didReceive bannerView: DFPBannerView) {
+    public func adLoader(_ adLoader: GADAdLoader, didReceive bannerView: GAMBannerView) {
         self.dfpBannerView = bannerView
         self.nativeAd = nil
         self.didLoad()

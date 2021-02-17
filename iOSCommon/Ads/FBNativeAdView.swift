@@ -12,7 +12,7 @@ import FBAudienceNetwork
 class FBNativeAdView: XibView {
     
     @IBOutlet weak var adLabel: UILabel!
-    @IBOutlet weak var iconView: FBAdIconView!
+    @IBOutlet weak var iconView: FBMediaView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var captionLabel: UILabel!

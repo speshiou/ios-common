@@ -2,6 +2,8 @@
 
 /**
  * An item that was purchased.
+ * @deprecated Do not use, supported only for sponsored product ads which have
+ * been discontinued.
  */
 @interface GANItemInfo : NSObject
 

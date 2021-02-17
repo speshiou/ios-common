@@ -16,6 +16,11 @@ extern const NSInteger GANErrorCodeInvalidRequest;
 extern const NSInteger GANErrorCodeTooManyUnusedAds;
 
 /**
+ * An error code indicating that a @c loadAds request returned no ads.
+ */
+extern const NSInteger GANErrorCodeNoFill;
+
+/**
  * A more detailed description of why the error was returned. This is included in the
  * NSError userInfo.
  */

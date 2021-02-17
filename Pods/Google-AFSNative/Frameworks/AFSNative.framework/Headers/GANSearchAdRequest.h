@@ -24,6 +24,8 @@ NS_ASSUME_NONNULL_BEGIN
  * <p>Only valid for Sponsored Product Ads (SPA). Must be specified if @c priceMin or
  * @c priceMax is set. The price filter will not be applied if the provided currency code
  * does not match the currency of the returned ads.
+ * @deprecated Sponsored product ads have been discontinued and this property
+ *     should not be used.
  */
 @property(nonatomic, readwrite, copy) NSString *priceCurrency;
 
@@ -39,6 +41,8 @@ NS_ASSUME_NONNULL_BEGIN
  * not contain currency symbols (e.g. "$") or commas (",").
  *
  * <p>These values are not sanitized in the SDK. Invalid values may result in request failures.
+ * @deprecated Sponsored product ads have been discontinued and this property
+ *     should not be used.
  */
 @property(nonatomic, readwrite, copy) NSString *priceMin;
 
@@ -54,6 +58,8 @@ NS_ASSUME_NONNULL_BEGIN
  * not contain currency symbols (e.g. "$") or commas (",").
  *
  * <p>These values are not sanitized in the SDK. Invalid values may result in request failures.
+ * @deprecated Sponsored product ads have been discontinued and this property
+ *     should not be used.
  */
 @property(nonatomic, readwrite, copy) NSString *priceMax;
 
@@ -63,6 +69,8 @@ NS_ASSUME_NONNULL_BEGIN
  * <p>Only valid for Sponsored Product Ads (SPA).
  *
  * <p>These values are not sanitized in the SDK. Invalid values may result in request failures.
+ * @deprecated Sponsored product ads have been discontinued and this property
+ *     should not be used.
  */
 @property(nonatomic, readwrite, copy) NSString *spaRestricts;
 

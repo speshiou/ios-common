@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -59,7 +57,7 @@
                                 </label>
                             </subviews>
                         </stackView>
-                        <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FJP-AR-kWO">
+                        <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FJP-AR-kWO">
                             <rect key="frame" x="0.0" y="88.5" width="45" height="25.5"/>
                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                             <inset key="contentEdgeInsets" minX="0.0" minY="4" maxX="0.0" maxY="0.0"/>
@@ -72,7 +70,7 @@
                         </button>
                     </subviews>
                 </stackView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gYf-24-1oc" customClass="FBAdIconView">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gYf-24-1oc" customClass="FBMediaView">
                     <rect key="frame" x="279" y="16" width="80" height="80"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
@@ -82,15 +80,16 @@
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7T5-BH-Ts1" customClass="FBAdOptionsView">
                     <rect key="frame" x="335" y="0.0" width="40" height="20"/>
+                    <viewLayoutGuide key="safeArea" id="hqq-nh-kVp"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="40" id="9Tu-cP-f2b"/>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="XTD-oQ-Qiu"/>
                         <constraint firstAttribute="height" constant="20" id="lWm-Qi-wOb"/>
                     </constraints>
-                    <viewLayoutGuide key="safeArea" id="hqq-nh-kVp"/>
                 </view>
             </subviews>
+            <viewLayoutGuide key="safeArea" id="RYb-7g-vD3"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="7T5-BH-Ts1" firstAttribute="trailing" secondItem="RYb-7g-vD3" secondAttribute="trailing" id="6WC-K1-SmP"/>
@@ -103,7 +102,6 @@
                 <constraint firstItem="7T5-BH-Ts1" firstAttribute="top" secondItem="RYb-7g-vD3" secondAttribute="top" id="yHZ-aI-lwP"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <viewLayoutGuide key="safeArea" id="RYb-7g-vD3"/>
             <point key="canvasLocation" x="192.80000000000001" y="-475.86206896551727"/>
         </view>
     </objects>

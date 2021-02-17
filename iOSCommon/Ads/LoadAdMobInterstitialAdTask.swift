@@ -11,16 +11,25 @@ import FirebaseCore
 import GoogleMobileAds
 
 public class LoadAdMobInterstitialAdTask: LoadInterstitialAdTask {
-    private var interstitialAd: GADInterstitial?
+    private var interstitialAd: GADInterstitialAd?
     
     override func onLoad() {
         super.onLoad()
-        interstitialAd = GADInterstitial(adUnitID: self.adId)
-        interstitialAd?.delegate = self
-        
         // For auto play video ads, it's recommended to load the ad
-        // at least 30 seconds before it is shown
-        interstitialAd?.load(GADRequest())
+        // at least 30 seconds before it is shown)
+        let adRequest = GADRequest()
+        #if DEBUG
+//        adRequest.testDeviceIdentifiers = [ "3bb15d73acc9737699e9bc06c09715dd" ]
+        #endif
+        GADInterstitialAd.load(withAdUnitID: self.adId, request: adRequest) { [weak self] (ad, error) in
+            if let error = error {
+                print("Failed to load interstitial ad with error: \(error.localizedDescription)")
+                return
+            }
+            self?.interstitialAd = ad
+            self?.interstitialAd?.fullScreenContentDelegate = self
+            self?.delegate?.onAdLoaded()
+        }
     }
     
     override public func show() {
@@ -40,36 +49,26 @@ public class LoadAdMobInterstitialAdTask: LoadInterstitialAdTask {
     }
     
     override public func isAdLoaded() -> Bool {
-        return interstitialAd?.isReady ?? false
+        return interstitialAd != nil
     }
 }
 
-extension LoadAdMobInterstitialAdTask: GADInterstitialDelegate {
-    public func interstitialWillPresentScreen(_ ad: GADInterstitial) {
+extension LoadAdMobInterstitialAdTask: GADFullScreenContentDelegate {
+    public func adDidPresentFullScreenContent(_ ad: GADFullScreenPresentingAd) {
         delegate?.onAdDisplayed()
-        
+    }
+    
+    public func adDidRecordImpression(_ ad: GADFullScreenPresentingAd) {
         AdCompat.logImpressionEvent(adType: adType, adId: adId)
     }
     
-    public func interstitialDidDismissScreen(_ ad: GADInterstitial) {
-        delegate?.onAdDismissed()
-    }
-    
-    public func interstitialWillLeaveApplication(_ ad: GADInterstitial) {
-        delegate?.onAdClicked()
-        
-        AdCompat.logClickEvent(adType: adType, adId: adId)
-    }
-    
-    public func interstitialDidReceiveAd(_ ad: GADInterstitial) {
-        delegate?.onAdLoaded()
-    }
-    
-    public func interstitialDidFail(toPresentScreen ad: GADInterstitial) {
-        
-    }
-    
-    public func interstitial(_ ad: GADInterstitial, didFailToReceiveAdWithError error: GADRequestError) {
+    public func ad(_ ad: GADFullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Error) {
+        print("[DFP] \(error.localizedDescription)")
         delegate?.onError()
     }
+    
+    public func adDidDismissFullScreenContent(_ ad: GADFullScreenPresentingAd) {
+        delegate?.onAdDismissed()
+    }
 }
+

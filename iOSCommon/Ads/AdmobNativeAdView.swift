@@ -11,7 +11,7 @@ import FirebaseCore
 import GoogleMobileAds
 
 class AdmobNativeAdView: XibView {
-    @IBOutlet weak var nativeAdView: GADUnifiedNativeAdView!
+    @IBOutlet weak var nativeAdView: GADNativeAdView!
     @IBOutlet weak var mediaView: GADMediaView!
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var adLabel: UILabel!

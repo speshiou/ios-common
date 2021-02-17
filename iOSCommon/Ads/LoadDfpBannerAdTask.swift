@@ -11,8 +11,8 @@ import GoogleMobileAds
 
 public class LoadDfpBannerAdTask: LoadAdTask {
     
-    var bannerView: DFPBannerView?
-    var pendingBannerView: DFPBannerView?
+    var bannerView: GAMBannerView?
+    var pendingBannerView: GAMBannerView?
     var widthConstraint: NSLayoutConstraint?
     var heightConstraint: NSLayoutConstraint?
     
@@ -21,7 +21,7 @@ public class LoadDfpBannerAdTask: LoadAdTask {
         
         let width = min(UIScreen.main.bounds.size.width, UIScreen.main.bounds.size.height)
         let height = max(UIScreen.main.bounds.size.width, UIScreen.main.bounds.size.height)
-        let bannerView = DFPBannerView(adSize: kGADAdSizeFluid)
+        let bannerView = GAMBannerView(adSize: kGADAdSizeFluid)
         bannerView.adUnitID = self.adUnitId
         bannerView.rootViewController = self.rootViewController
         bannerView.delegate = self
@@ -36,7 +36,7 @@ public class LoadDfpBannerAdTask: LoadAdTask {
             values.append(NSValueFromGADAdSize(adSize))
         }
         bannerView.validAdSizes = values
-        let adRequest = DFPRequest()
+        let adRequest = GAMRequest()
         #if DEBUG
 //        adRequest.testDevices = [ "3bb15d73acc9737699e9bc06c09715dd" ]
         #endif
@@ -62,14 +62,14 @@ public class LoadDfpBannerAdTask: LoadAdTask {
 }
 
 extension LoadDfpBannerAdTask: GADBannerViewDelegate {
-    public func adViewDidReceiveAd(_ bannerView: GADBannerView) {
-        self.bannerView = bannerView as? DFPBannerView
+    public func bannerViewDidReceiveAd(_ bannerView: GADBannerView) {
+        self.bannerView = bannerView as? GAMBannerView
         self.pendingBannerView = nil
         self.didLoad()
     }
     
-    public func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
-        NSLog("\(error.code) \(error.localizedDescription)")
+    public func bannerView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: Error) {
+        NSLog(error.localizedDescription)
         if self.bannerView == nil {
             self.didFail()
         } else {
@@ -77,12 +77,12 @@ extension LoadDfpBannerAdTask: GADBannerViewDelegate {
         }
     }
     
-    public func adViewWillPresentScreen(_ bannerView: GADBannerView) {
-        print("adViewWillPresentScreen")
+    public func bannerViewWillPresentScreen(_ bannerView: GADBannerView) {
+        print("bannerViewWillPresentScreen")
     }
     
-    public func adViewWillLeaveApplication(_ bannerView: GADBannerView) {
-        print("adViewWillLeaveApplication")
+    public func bannerViewWillDismissScreen(_ bannerView: GADBannerView) {
+        print("bannerViewWillDismissScreen")
     }
 }
 
