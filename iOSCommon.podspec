@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "iOSCommon"
-  spec.version      = "1.1.1"
+  spec.version      = "1.1.2"
   spec.summary      = "iOS Common Library"
 
   # This description is used to generate tags and improve search results.
@@ -142,6 +142,6 @@ Pod::Spec.new do |spec|
   spec.dependency "Firebase/Analytics"
   spec.dependency "FBAudienceNetwork"
   spec.dependency "Google-Mobile-Ads-SDK"
-  spec.dependency "Google-AFSNative"
+  spec.dependency "GoogleMobileAdsMediationFacebook"
 
 end
