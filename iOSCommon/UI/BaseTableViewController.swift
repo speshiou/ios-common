@@ -376,7 +376,7 @@ extension BaseTableViewController: LoadAdTaskDelegate {
     }
 }
 
-public protocol BaseTableViewControllerScrollDelegate: class {
+public protocol BaseTableViewControllerScrollDelegate: AnyObject {
     func scrollViewDidScrollUp()
     func scrollViewDidScrollDown()
 }

@@ -8,7 +8,6 @@
 
 import Foundation
 import UIKit
-import FirebaseCore
 import GoogleMobileAds
 
 public class AdViewRecycler {

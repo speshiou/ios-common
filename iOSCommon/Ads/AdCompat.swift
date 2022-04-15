@@ -7,9 +7,7 @@
 //
 
 import Foundation
-import FirebaseCore
 import GoogleMobileAds
-import FirebaseAnalytics
 
 public class AdCompat {
     public static let AD_FB_NATIVE = 101
@@ -48,25 +46,25 @@ public class AdCompat {
         for size in bannerSizes {
             switch (size) {
             case "BANNER":
-                sizes.append(kGADAdSizeBanner)
+                sizes.append(GADAdSizeBanner)
                 break
             case "FULL_BANNER":
-                sizes.append(kGADAdSizeFullBanner)
+                sizes.append(GADAdSizeFullBanner)
                 break
             case "LARGE_BANNER":
-                sizes.append(kGADAdSizeLargeBanner)
+                sizes.append(GADAdSizeLargeBanner)
                 break
             case "LEADERBOARD":
-                sizes.append(kGADAdSizeLeaderboard)
+                sizes.append(GADAdSizeLeaderboard)
                 break
             case "MEDIUM_RECTANGLE":
-                sizes.append(kGADAdSizeMediumRectangle)
+                sizes.append(GADAdSizeMediumRectangle)
                 break
             case "WIDE_SKYSCRAPER":
-                sizes.append(kGADAdSizeSkyscraper)
+                sizes.append(GADAdSizeSkyscraper)
                 break
             case "FLUID":
-                sizes.append(kGADAdSizeFluid)
+                sizes.append(GADAdSizeFluid)
                 break
             default:
                 break
@@ -76,16 +74,10 @@ public class AdCompat {
     }
     
     class func logImpressionEvent(adType: String, adId: String) {
-        Analytics.logEvent("ad_impression_ab", parameters: [
-            "ad_type": adType as NSObject,
-            "ad_id": adId as NSObject
-            ])
+
     }
     
     class func logClickEvent(adType: String, adId: String) {
-        Analytics.logEvent("ad_click_ab", parameters: [
-            "ad_type": adType as NSObject,
-            "ad_id": adId as NSObject
-            ])
+
     }
 }

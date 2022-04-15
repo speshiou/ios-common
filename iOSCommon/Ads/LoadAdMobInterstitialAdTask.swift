@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import FirebaseCore
 import GoogleMobileAds
 
 public class LoadAdMobInterstitialAdTask: LoadInterstitialAdTask {
@@ -54,7 +53,7 @@ public class LoadAdMobInterstitialAdTask: LoadInterstitialAdTask {
 }
 
 extension LoadAdMobInterstitialAdTask: GADFullScreenContentDelegate {
-    public func adDidPresentFullScreenContent(_ ad: GADFullScreenPresentingAd) {
+    public func adWillPresentFullScreenContent(_ ad: GADFullScreenPresentingAd) {
         delegate?.onAdDisplayed()
     }
     

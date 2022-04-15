@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import FirebaseCore
 import GoogleMobileAds
 
 class AdmobNativeAdView: XibView {

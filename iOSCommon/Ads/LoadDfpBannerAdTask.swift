@@ -21,7 +21,7 @@ public class LoadDfpBannerAdTask: LoadAdTask {
         
         let width = min(UIScreen.main.bounds.size.width, UIScreen.main.bounds.size.height)
         let height = max(UIScreen.main.bounds.size.width, UIScreen.main.bounds.size.height)
-        let bannerView = GAMBannerView(adSize: kGADAdSizeFluid)
+        let bannerView = GAMBannerView(adSize: GADAdSizeFluid)
         bannerView.adUnitID = self.adUnitId
         bannerView.rootViewController = self.rootViewController
         bannerView.delegate = self

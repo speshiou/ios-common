@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol InterstitialAdListener: class {
+public protocol InterstitialAdListener: AnyObject {
     func onAdLoaded()
     func onAdDismissed()
     func onAdClicked()

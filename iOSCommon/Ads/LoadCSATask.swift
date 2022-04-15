@@ -32,7 +32,7 @@ public class LoadCSATask: LoadAdTask {
             return
         }
         
-        let bannerView = GADSearchBannerView(adSize: kGADAdSizeFluid)
+        let bannerView = GADSearchBannerView(adSize: GADAdSizeFluid)
         let unitIds = self.adUnitId.components(separatedBy: "/")
         if !unitIds.isEmpty {
             bannerView.adUnitID = unitIds[0]
